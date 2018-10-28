@@ -1,2 +1,2 @@
-# CriminalVoices.github.io
+# CriminalTattoos.github.io
 Repository for project data blog
