@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Introducing the Tattoos Project | Nineteenth-Century Criminal Tattoos</title>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/fonts.css" />
+    <link rel="icon" type="image/png" href="https://CriminalTattoos.github.io/favicon.png" />
+<meta property="og:site_name" content="Nineteenth-Century Criminal Tattoos" />
+<meta property="og:description" content="A data exploration and visualisation blog" />
+
+<meta property="og:type" content="article" />
+<meta property="article:author" content="Sharon Howard" />
+<meta property="article:published_time" content="03 November 2018" />
+<meta property="og:title" content="Introducing the Tattoos Project" />
+
+  </head>
+
+  <body>
+    <nav>
+    <ul class="menu">
+      
+      <li><a href="/">Home</a></li>
+      
+      <li><a href="/post/">Posts</a></li>
+      
+      <li><a href="/resources/">Resources</a></li>
+      
+      <li><a href="https://github.com/CriminalTattoos">GitHub</a></li>
+      
+      <li><a href="/index.xml">RSS</a></li>
+      
+    </ul>
+    </nav>
+
+<div class="article-meta">
+<h1>
+  <span class="title">Introducing the Tattoos Project</span>
+</h1>
+
+
+  <h2 class="author">Sharon Howard</h2>
+
+
+  <h2 class="date">03 November 2018</h2>
+
+</div>
+
+<main>
+<div id="TOC">
+<ul>
+<li><a href="#the-project">The project</a><ul>
+<li><a href="#data-extraction-and-classification">Data extraction and classification</a></li>
+<li><a href="#data-analysis-and-visualisation">Data analysis and visualisation</a></li>
+</ul></li>
+<li><a href="#the-datasets">The datasets</a></li>
+<li><a href="#the-descriptions">The descriptions</a><ul>
+<li><a href="#criminal-registers">Criminal registers</a></li>
+<li><a href="#founders-and-survivors">Founders and Survivors</a></li>
+<li><a href="#registers-of-habitual-criminals">Registers of Habitual Criminals</a></li>
+</ul></li>
+<li><a href="#whats-next">What’s next?</a></li>
+<li><a href="#code-and-data">Code and data</a></li>
+</ul>
+</div>
+
+<div id="the-project" class="section level2">
+<h2>The project</h2>
+<p>This website accompanies the British Academy funded project <a href="https://www.dhi.ac.uk/criminal-tattoos/">Criminal Tattoos</a>.</p>
+<blockquote>
+<p>The remarkable increase in tattooing among convicts in the nineteenth century is poorly understood. It is unclear why convicts marked their bodies in ways which facilitated official surveillance, nor do we understand the complex mixture of sentiments expressed. Building on existing, but limited, case studies, this project will analyse tattoos on 60,700 convicts in Britain and Australia from 1788 to 1925, examining descriptions of tattoos alongside evidence of convicts’ personal backgrounds. While this evidence is available within the Digital Panopticon web resource, this topic is currently impossible to research because 1) information about tattoos is often cryptic and enmeshed within broader descriptive fields, and 2) existing search and visualisation facilities do not enable the data to be usefully interrogated and synthesised. This project will develop new methods of data extraction and visualisation in order to better understand the meanings embedded within this and other rich bodies of fragmentary textual evidence.</p>
+</blockquote>
+<p>The project has two main components:</p>
+<div id="data-extraction-and-classification" class="section level3">
+<h3>Data extraction and classification</h3>
+<p>The physical description fields in the datasets consist of undifferentiated and fragmentary language which can include various physical attributes (eg heights, scars, disabilities) in addition to tattoos. Descriptions of tattoos are also varied and include a variety of names, initials, dates, emotions, objects and symbols. These scraps of descriptive language need to be identified, delineated and classified, but the datasets are too large in most cases for it to be feasible to mark them up manually. Instead, the project will build on and extend automated techniques developed for the Digital Panopticon. The Digital Humanities Institute, Sheffield, will be primarily responsible for the development work.</p>
+</div>
+<div id="data-analysis-and-visualisation" class="section level3">
+<h3>Data analysis and visualisation</h3>
+<p>Which is where this blog comes in! I’ll be using R to experiment with data analysis and visualisation techniques in order to explore some of the project’s research questions. In addition to tattoos, we’ll have significant amounts of biographical information for many individuals, including gender, age, occupation, religion, type of crime, previous convictions, and punishment and we’ll explore ways to use visualisation to summarise and analyse this evidence, in order to identify the specific contexts in which tattooing, and particular types of tattoos, were used.</p>
+<p>In the process I hope to offer methods that will be transferable to analyse other types of complex and fragmentary textual data found in many historical (and contemporary) sources.</p>
+<p>Research questions include:</p>
+<ul>
+<li>Why, over the course of the nineteenth century, did convicts increasingly use their bodies as sites for recording their life events and expressing their identity and sentiments, despite the fact the state collected evidence of their tattoos for surveillance purposes?</li>
+<li>Which convicts, and from which social contexts, were most likely to have tattoos? How does tattooing vary by gender, age, occupation, religion and place of origin? How did these patterns change over the course of the nineteenth century?</li>
+<li>Are there any significant differences between the tattoos of convicts who were transported to Australia and those who were imprisoned in Britain? Were recidivists more likely to have tattoos, and how did convicts chart their penal experiences?</li>
+<li>What light does the practice of tattooing shed on changing attitudes towards the body in the nineteenth century?</li>
+</ul>
+</div>
+</div>
+<div id="the-datasets" class="section level2">
+<h2>The datasets</h2>
+<p>The project focuses on evidence of tattooing found in six major datasets in the <a href="https://www.digitalpanopticon.org">Digital Panopticon</a>. The broad chronological and geographical range allows the project to analyse change over time and to compare tattoos on transported and imprisoned convicts.</p>
+<p>The counts of individuals with tattoos are estimates. The data is based on <em>textual descriptions</em> of tattoos, not images. (Very occasionally officials added rough sketches of tattoos, but this seems to be uncommon.)</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">dataset</th>
+<th align="left">location</th>
+<th align="right">start</th>
+<th align="right">end</th>
+<th align="right">individuals</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><a href="https://www.digitalpanopticon.org/England_and_Wales_Criminal_Registers_1791-1892">Criminal Registers</a></td>
+<td align="left">London</td>
+<td align="right">1791</td>
+<td align="right">1801</td>
+<td align="right">25</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://www.digitalpanopticon.org/VDL_Founders_and_Survivors_Convicts_1802-1853">Founders and Survivors</a></td>
+<td align="left">Tasmania</td>
+<td align="right">1803</td>
+<td align="right">1853</td>
+<td align="right">9000</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://www.digitalpanopticon.org/Prison_Registers_1770-1951">Millbank Prison Register</a></td>
+<td align="left">London</td>
+<td align="right">1816</td>
+<td align="right">1826</td>
+<td align="right">120</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://www.digitalpanopticon.org/Convict_Indents_(Ship_and_Arrival_Registers)_1788-1868">Convict Indents</a></td>
+<td align="left">Western Australia</td>
+<td align="right">1850</td>
+<td align="right">1868</td>
+<td align="right">1000</td>
+</tr>
+<tr class="odd">
+<td align="left"><a href="https://www.digitalpanopticon.org/UK_Licences_for_the_Parole_of_Convicts_1853-1925">Convict Licences</a></td>
+<td align="left">London</td>
+<td align="right">1853</td>
+<td align="right">1887</td>
+<td align="right">550</td>
+</tr>
+<tr class="even">
+<td align="left"><a href="https://www.digitalpanopticon.org/Metropolitan_Police_Register_of_Habitual_Criminals_1881-1925">Registers of Habitual Criminals</a></td>
+<td align="left">Eng+Wales</td>
+<td align="right">1881</td>
+<td align="right">1925</td>
+<td align="right">50000</td>
+</tr>
+</tbody>
+</table>
+<p>Some of the datasets focus on London criminals: the Criminal registers listed only London/Middlesex prisoners, and the Digital Panopticon transcribed in detail only London prisoners in the Millbank prison register and Convict licences). The other datasets have national coverage (Founders and Survivors, WA convict indents, Registers of habitual criminals).</p>
+</div>
+<div id="the-descriptions" class="section level2">
+<h2>The descriptions</h2>
+<p>I’ll take a closer look at the data in later posts, but here are a few examples of descriptions containing tattoos, to show why the data extraction part of the project is such a challenge.</p>
+<div id="criminal-registers" class="section level3">
+<h3>Criminal registers</h3>
+<p>The number of tattooed individuals in this dataset is very small and probably not suitable for quantitative analysis, but 18th-century evidence of tattoos in Britain is rare so this may still provide useful context.</p>
+<table>
+<colgroup>
+<col width="100%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Aged 19. 5F/4I Sallow brown hair grey eyes Monaghar Ireland a Marine has an Anchor marked on left arm his right</td>
+</tr>
+<tr class="even">
+<td align="left">25 Yrs. 5F/8I. Fresh Complex. brown hair grey eyes Kelse Scotland a Mariner served his apprenticeship from Shields in Ye. So Sea &amp; Greenland. Trade &amp; in the Shunderer was at has a woman &amp; a Square &amp; Compass marked on his left arm &amp; on or cast .on the Cross</td>
+</tr>
+<tr class="odd">
+<td align="left">Aged 20. 5F. 5I. Fair Complex brown hair dark eyes Ireland in his right arm is marked emblems of Musenry, on is left arm Arist or certified, with the Mitials of new name Marner</td>
+</tr>
+<tr class="even">
+<td align="left">Aged 21. 5F. 5I. Fair Complex brown hair dark eyes Cork Ireland on his left arm is marked Mermaid wish W. I. &amp; W. M. I. M. on to wright arm taken in the Manly Captn. Adams of Pool.</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="founders-and-survivors" class="section level3">
+<h3>Founders and Survivors</h3>
+<p>These were recorded after arrival in Tasmania and at least some were acquired after leaving Britain, so it’ll be interesting to compare them with the data for prisoners in Britain.</p>
+<table>
+<colgroup>
+<col width="100%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">JR’ ‘MAH’ above elbow joint right arm. Ring on middle finger right hand. Large scar right hand near little finger. ‘SH’ on right arm.</td>
+</tr>
+<tr class="even">
+<td align="left">T.F.R.H. rt arm S.H left arm - Stout made -</td>
+</tr>
+<tr class="odd">
+<td align="left">Lost some front Teeth Lower Jaw 6 Blue dots on left Hand</td>
+</tr>
+<tr class="even">
+<td align="left">&lt;[X: H]&gt; TT. A.N. H. WC LL on Rt Shoulder</td>
+</tr>
+<tr class="odd">
+<td align="left">3 blue dots on left Hand</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="registers-of-habitual-criminals" class="section level3">
+<h3>Registers of Habitual Criminals</h3>
+<p>Individuals could appear on numerous occasions in the registers. This makes the data more complex, but offers the potential to trace evolving personal biographies rather than snapshots at a single moment in time.</p>
+<table>
+<colgroup>
+<col width="100%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">marks</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Sailor and flag right arm, mole right shoulder</td>
+</tr>
+<tr class="even">
+<td align="left">Rose, thistle and shamrock on left wrist, ship on right arm</td>
+</tr>
+<tr class="odd">
+<td align="left">Blue dot right arm, mole right breast, birth-mark top of left foot, lost all front upper teeth</td>
+</tr>
+<tr class="even">
+<td align="left">Ring third right finger, dot back of each hand, cross-flags left arm, sailor right arm, moles on back and neck</td>
+</tr>
+<tr class="odd">
+<td align="left">T. and three indistinct marks right arm, scars on chest, left eye, left wrist, back, back of head and left of head</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div id="whats-next" class="section level2">
+<h2>What’s next?</h2>
+<p>The initial phase of the project will be focusing on data cleaning and preparation for the process of extraction and classification. I’ll take a closer look here at the descriptions data and also the Digital Panopticon life archives. I’ll be comparing the datasets and using some basic textmining (word counts, collocations), exploring how the descriptions were originally recorded, the range of information included, and the variability of the language used.</p>
+<p>In later months, I’ll experiment with ways of mining and visualising the tattoos corpus, and using the linked life archives data to analyse relationships between tattooing and convicts’ biographical and social characteristics.</p>
+</div>
+<div id="code-and-data" class="section level2">
+<h2>Code and data</h2>
+<p>I’ll be using <a href="https://en.wikipedia.org/wiki/R_(programming_language)">R</a>, a programming language particularly geared towards statistical analysis and visualisation, throughout this blogging project. This enables me to do most of what I need for the project - data wrangling and tidying, exploratory analysis, statistical modelling and visualisation, blogging - in one place, so that (hopefully…) everything I do will be re-usable, either to test/reproduce my own results or as examples that can be adapted for other data and research.</p>
+<p><strong>There will be R code in blog posts</strong>. This will be familiar to any readers who follow data science blogs, but may be new and a bit intimidating to many historians. One of the goals of this blog is to show how R can be of <em>practical</em> use for working with large, complicated historical datasets, right through the research process from data management to publication. (The same is true of other popular languages, especially Python; I’m not claiming any particular superiority for R, but this is a short time-limited project and R is what I’m currently most familiar with!)</p>
+<p>With this in mind, I’m also compiling a <a href="/resources/">list of resources</a>, which will be regularly updated during the project. Most of them will be resources (tutorials, packages, etc) that I’ve actually used and found helpful.</p>
+<p>All R code and data will be made available for re-use at the project <a href="https://github.com/CriminalTattoos">Github repository</a>. Some of the data being used by the project is already publicly available from the University of Sheffield <a href="https://figshare.com/projects/Digital_Panopticon/16071">data repository</a> and other datasets will be added there during the course of this project.</p>
+</div>
+
+</main>
+
+  <footer>
+  <script src="//yihui.name/js/math-code.js"></script>
+<script async src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+
+<script async src="//yihui.name/js/center-img.js"></script>
+
+  
+  <hr/>
+  <a href="http://sharonhoward.org">Sharon Howard</a> | Powered by <a href="https://bookdown.org/yihui/blogdown/">blogdown</a> and <a href="https://themes.gohugo.io/xmin/">XMin theme</a>
+  
+  </footer>
+  </body>
+</html>
+
