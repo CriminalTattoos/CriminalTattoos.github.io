@@ -28,8 +28,8 @@
       
       <guid>https://CriminalTattoos.github.io/resources/</guid>
       <description>These are all (at the time of writing) freely available online resources.
-general  CRAN - The Comprehensive R Archive Network RStudio  tutorials getting started Programming Historian lessons:
- R Basics with Tabular Data Basic Text Processing in R Data Wrangling and Management in R  more substantial  R for Data Science - the textbook for &amp;ldquo;Tidy&amp;rdquo; R. Text Mining with R  focused on doing history with R  Computational Historical Thinking With Applications in R Correspondence Analysis for Historical Research with R  Data visualisation  ggplot2 (R package) Data visualization: a practical introduction Fundamentals of data visualization  Other coding resources  Teaching yourself to code in DH  Statistics  Statistics for the Humanities r-statistics.</description>
+General  CRAN - The Comprehensive R Archive Network RStudio StackOverflow posts tagged [R]  Tutorials getting started Programming Historian lessons:
+ R Basics with Tabular Data Basic Text Processing in R Data Wrangling and Management in R  more substantial  R for Data Science - the textbook for &amp;ldquo;Tidy&amp;rdquo; R. Text Mining with R  focused on doing history with R  Computational Historical Thinking With Applications in R Correspondence Analysis for Historical Research with R  Data visualisation  ggplot2 (R package) Data visualization: a practical introduction Fundamentals of data visualization  Statistics  Statistics for the Humanities r-statistics.</description>
     </item>
     
   </channel>
