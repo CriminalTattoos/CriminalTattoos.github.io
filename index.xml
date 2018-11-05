@@ -17,18 +17,19 @@
       <pubDate>Sat, 03 Nov 2018 00:00:00 +0000</pubDate>
       
       <guid>https://CriminalTattoos.github.io/post/2018/11/03/introduction/</guid>
-      <description>The project Data extraction and classification Data analysis and visualisation  The datasets The descriptions Criminal registers Founders and Survivors Registers of Habitual Criminals  What’s next? Code and data   The project This website accompanies the British Academy funded project Criminal Tattoos.
+      <description>The project Data extraction and classification Data analysis and visualisation  The datasets The descriptions Criminal registers Founders and Survivors Registers of Habitual Criminals  Code and data What’s next?   The project This website accompanies the British Academy funded project Criminal Tattoos.
  The remarkable increase in tattooing among convicts in the nineteenth century is poorly understood. It is unclear why convicts marked their bodies in ways which facilitated official surveillance, nor do we understand the complex mixture of sentiments expressed.</description>
     </item>
     
     <item>
-      <title>Resources</title>
+      <title>Resources for R</title>
       <link>https://CriminalTattoos.github.io/resources/</link>
       <pubDate>Thu, 01 Nov 2018 00:00:00 +0000</pubDate>
       
       <guid>https://CriminalTattoos.github.io/resources/</guid>
-      <description>The project  Digital Panopticon Tattoos project  data  Digital Panopticon project repository Tattoos project on Github  R general  CRAN - The Comprehensive R Archive Network RStudio  R tutorials Introductions Programming Historian lessons:
- R Basics with Tabular Data Basic Text Processing in R Data Wrangling and Management in R  More substantial/specialised  R for Data Science Text Mining with R Modern Dive: An Introduction to Statistical and Data Sciences via R Statistical Rethinking with brms, ggplot2 and the tidyverse  Focused on doing history with R  Computational Historical Thinking With Applications in R Correspondence Analysis for Historical Research with R  Data visualisation  ggplot2 (key R package) Data visualization: a practical introduction Fundamentals of data visualization  Blogging with R  blogdown package (uses Hugo)  Other coding resources  Teaching yourself to code in DH  Statistics  Statistics for the Humanities r-statistics.</description>
+      <description>These are all (at the time of writing) freely available online resources.
+general  CRAN - The Comprehensive R Archive Network RStudio  tutorials getting started Programming Historian lessons:
+ R Basics with Tabular Data Basic Text Processing in R Data Wrangling and Management in R  more substantial  R for Data Science - the textbook for &amp;ldquo;Tidy&amp;rdquo; R. Text Mining with R  focused on doing history with R  Computational Historical Thinking With Applications in R Correspondence Analysis for Historical Research with R  Data visualisation  ggplot2 (R package) Data visualization: a practical introduction Fundamentals of data visualization  Other coding resources  Teaching yourself to code in DH  Statistics  Statistics for the Humanities r-statistics.</description>
     </item>
     
   </channel>
