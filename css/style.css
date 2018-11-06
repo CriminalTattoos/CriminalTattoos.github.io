@@ -6,7 +6,7 @@ body {
 }
 
 a {
-  color: #4E6335;
+  color: #8a3d3e;
 }
 
 /* home page */
@@ -18,6 +18,8 @@ a {
   text-align:center;
 }
 
+h1, h2, h3, h4 {font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;}
+
 .front-meta h1 {
   font-size:36px;
 }
@@ -26,8 +28,8 @@ a {
 }
 
 .front-meta, .article-meta, .list-meta {
-  background:#8a3d3e;
-  color:#F8FAF5;
+  color:#732D2E;
+  background:#f7f6f2;
 }
 
 /* header and footer areas */
@@ -42,7 +44,7 @@ a {
 .title { font-size: 1.1em; }
 
 .menu a {
-  background: #F7F5F5;
+  background: #f7f6f2;
   color:#4E6335;
 }
 
@@ -57,7 +59,7 @@ main h3 {
   margin: 25px 0 0 0;
 }
 
-footer a { text-decoration: none; }
+footer a { text-decoration: none; color:#4E6335; }
 hr {
   border-style: dotted;
   color: #f6ecec;
@@ -77,7 +79,7 @@ pre code { background: none; }
 img, iframe, video { max-width: 100%; }
 main { hyphens: auto; }
 blockquote {
-  background: #F7F5F5;
+  background: #f7f6f2;
   border-left: 5px solid #627748;
   padding: 3px 1em 3px;
 }
@@ -89,4 +91,4 @@ table {
 }
 table thead th { border-bottom: 1px solid #ddd; }
 th, td { padding: 5px; }
-thead, tfoot, tr:nth-child(even) { background: #EDEBEB }
+thead, tfoot, tr:nth-child(even) { background: #f7f6f2 }
