@@ -2,34 +2,34 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Home on Nineteenth-Century Criminal Tattoos</title>
-    <link>https://CriminalTattoos.github.io/</link>
+    <link>/</link>
     <description>Recent content in Home on Nineteenth-Century Criminal Tattoos</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <lastBuildDate>Sat, 03 Nov 2018 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="https://CriminalTattoos.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Introducing the Tattoos Project</title>
-      <link>https://CriminalTattoos.github.io/post/2018/11/03/introduction/</link>
+      <link>/post/2018/11/03/introduction/</link>
       <pubDate>Sat, 03 Nov 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://CriminalTattoos.github.io/post/2018/11/03/introduction/</guid>
+      <guid>/post/2018/11/03/introduction/</guid>
       <description>The project Data extraction and classification Data analysis and visualisation  The datasets The descriptions Criminal registers Founders and Survivors Registers of Habitual Criminals  Code and data What’s next?   The project This website accompanies the British Academy funded project Criminal Tattoos.
  The remarkable increase in tattooing among convicts in the nineteenth century is poorly understood. It is unclear why convicts marked their bodies in ways which facilitated official surveillance, nor do we understand the complex mixture of sentiments expressed.</description>
     </item>
     
     <item>
       <title>Resources for R</title>
-      <link>https://CriminalTattoos.github.io/resources/</link>
+      <link>/resources/</link>
       <pubDate>Thu, 01 Nov 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://CriminalTattoos.github.io/resources/</guid>
+      <guid>/resources/</guid>
       <description>These are all (at the time of writing) freely available online resources.
-General  CRAN - The Comprehensive R Archive Network RStudio StackOverflow posts tagged [R]  Tutorials getting started Programming Historian lessons:
- R Basics with Tabular Data Basic Text Processing in R Data Wrangling and Management in R  more substantial  R for Data Science - the textbook for &amp;ldquo;Tidy&amp;rdquo; R. Text Mining with R  focused on doing history with R  Computational Historical Thinking With Applications in R Correspondence Analysis for Historical Research with R  Data visualisation  ggplot2 (R package) Data visualization: a practical introduction Fundamentals of data visualization  Statistics  Statistics for the Humanities r-statistics.</description>
+General  CRAN - The Comprehensive R Archive Network RStudio StackOverflow posts tagged [R]  Tutorials getting started  Excel vs R: A Brief Introduction to R - why to use R for data analysis instead of spreadsheets, and how to get started, using a historical source as an example  Programming Historian lessons:
+ R Basics with Tabular Data Basic Text Processing in R Data Wrangling and Management in R  more substantial  R for Data Science - the textbook for &amp;ldquo;Tidy&amp;rdquo; R.</description>
     </item>
     
   </channel>
