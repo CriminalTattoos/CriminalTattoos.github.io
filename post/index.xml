@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on Nineteenth-Century Criminal Tattoos</title>
-    <link>/post/</link>
+    <link>https://CriminalTattoos.github.io/post/</link>
     <description>Recent content in Posts on Nineteenth-Century Criminal Tattoos</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
     <lastBuildDate>Tue, 21 May 2019 00:00:00 +0000</lastBuildDate>
     
-	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://CriminalTattoos.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Tattoos Hackathon, 16 April 2019</title>
-      <link>/post/2019/05/21/tattoos-hackathon-16-april-2019/</link>
+      <link>https://CriminalTattoos.github.io/post/2019/05/21/tattoos-hackathon-16-april-2019/</link>
       <pubDate>Tue, 21 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>/post/2019/05/21/tattoos-hackathon-16-april-2019/</guid>
+      <guid>https://CriminalTattoos.github.io/post/2019/05/21/tattoos-hackathon-16-april-2019/</guid>
       <description>Introduction Designs: word correlations (selected words) Designs: word correlations Subjects: correlation plot Designs: comparing word use by punishment   Introduction For the project’s data hackathon last month, I put together a few very exploratory slides. I’m currently working on more ideas, but I thought I’d put these up to whet a few appetites.
 The data itself is still very much work in progress, so on this occasion I’m not going to share the dataset; sorry, you’ll just have to wait a bit longer!</description>
     </item>
     
     <item>
       <title>Introducing the Tattoos Project</title>
-      <link>/post/2018/11/03/introduction/</link>
+      <link>https://CriminalTattoos.github.io/post/2018/11/03/introduction/</link>
       <pubDate>Sat, 03 Nov 2018 00:00:00 +0000</pubDate>
       
-      <guid>/post/2018/11/03/introduction/</guid>
+      <guid>https://CriminalTattoos.github.io/post/2018/11/03/introduction/</guid>
       <description>The project Data extraction and classification Data analysis and visualisation  The datasets The descriptions Criminal registers Founders and Survivors Registers of Habitual Criminals  Code and data What’s next?   The project This website accompanies the British Academy funded project Criminal Tattoos.
  The remarkable increase in tattooing among convicts in the nineteenth century is poorly understood. It is unclear why convicts marked their bodies in ways which facilitated official surveillance, nor do we understand the complex mixture of sentiments expressed.</description>
     </item>
