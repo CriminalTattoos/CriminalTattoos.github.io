@@ -6,10 +6,20 @@
     <description>Recent content in Home on Nineteenth-Century Criminal Tattoos</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Sat, 03 Nov 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 21 May 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Tattoos Hackathon, 16 April 2019</title>
+      <link>/post/2019/05/21/tattoos-hackathon-16-april-2019/</link>
+      <pubDate>Tue, 21 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>/post/2019/05/21/tattoos-hackathon-16-april-2019/</guid>
+      <description>Introduction Designs: word correlations (selected words) Designs: word correlations Subjects: correlation plot Designs: comparing word use by punishment   Introduction For the project’s data hackathon last month, I put together a few very exploratory slides. I’m currently working on more ideas, but I thought I’d put these up to whet a few appetites.
+The data itself is still very much work in progress, so on this occasion I’m not going to share the dataset; sorry, you’ll just have to wait a bit longer!</description>
+    </item>
     
     <item>
       <title>Introducing the Tattoos Project</title>
