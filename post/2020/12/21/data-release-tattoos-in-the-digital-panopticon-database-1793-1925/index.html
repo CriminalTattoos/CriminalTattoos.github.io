@@ -55,32 +55,8 @@
 <p>I’m delighted to be able to announce that we’ve shared the project data under a Creative Commons licence and it’s now available for download from the University of Sheffield data repository:</p>
 <p><a href="https://figshare.shef.ac.uk/articles/dataset/Tattoos_in_the_Digital_Panopticon_Database_1793-1925/13398665/1">Tattoos in the Digital Panopticon database, 1793-1925</a></p>
 <p>I’ll be blogging about this soon; here’s a taster of what’s to come…</p>
-<pre class="r"><code>body_term %&gt;%
-  select(subrecordid, term, body) %&gt;%
-  filter(!body %in% c(&quot;unspecified&quot;, &quot;specifier&quot;), str_length(term)&gt;1) %&gt;%
-  count(body, name=&quot;n_boddy&quot;, sort=T) %&gt;%
-  top_n(12,n_boddy) %&gt;% 
-  inner_join(body_term, by=&quot;body&quot;) %&gt;%
-  count(body, term, n_boddy) %&gt;%
-    group_by(body) %&gt;%
-    top_n(8, n) %&gt;%
-    ungroup %&gt;%
-    mutate(term = reorder_within(term, n, body)) %&gt;%
-    ggplot(aes(term, n, fill = body)) +
-    geom_col(show.legend = FALSE) +
-    facet_wrap(~fct_reorder(body, desc(n_boddy)), scales = &quot;free&quot;) +
-    coord_flip() +
-  scale_x_reordered() +
-    scale_y_continuous(expand = c(0,0)) +
-    labs(y = NULL,  x = NULL, title=&quot;Top terms for top 12 body parts&quot;)</code></pre>
-<p><img src="/post/2020-12-21-data-release-tattoos-in-the-digital-panopticon-database-1793-1925_files/figure-html/bp_202012_top_parts_top_terms-1.png" width="672" /></p>
-<pre class="r"><code>tattoos_subject_dec_sub_r %&gt;%
-  ggplot(aes(x=decade_label, y=fct_reorder(subject, desc(subject)), fill=n_ds)) +
-  geom_raster() +
-  scale_fill_viridis_c(option = &quot;A&quot;, direction = -1)  +
-theme(panel.background = element_rect(fill = &quot;white&quot;, colour = &quot;#fbf9d3&quot;), panel.grid.minor=element_blank(),  panel.grid.major=element_blank() ) +
-labs(title=&quot;Changing mix of tattoo subjects by decade 1821-1920&quot;, x=&quot;decade&quot;, y=NULL, fill=&quot;subject \ncount&quot;)</code></pre>
-<p><img src="/post/2020-12-21-data-release-tattoos-in-the-digital-panopticon-database-1793-1925_files/figure-html/bp_202012_changing_subjects-1.png" width="672" /></p>
+<p><img src="/post/2020-12-21-data-release-tattoos-in-the-digital-panopticon-database-1793-1925_files/figure-html/bp_202012_top_parts_top_terms-1.png" width="95%" /></p>
+<p><img src="/post/2020-12-21-data-release-tattoos-in-the-digital-panopticon-database-1793-1925_files/figure-html/bp_202012_changing_subjects-1.png" width="95%" /></p>
 
 </main>
 
