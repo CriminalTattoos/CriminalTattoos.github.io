@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://CriminalTattoos.github.io/post/2020/12/21/data-release-tattoos-in-the-digital-panopticon-database-1793-1925/</loc>
+    <lastmod>2020-12-21T00:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://CriminalTattoos.github.io/post/2019/05/21/tattoos-hackathon-16-april-2019/</loc>
     <lastmod>2019-05-21T00:00:00+00:00</lastmod>
   </url>
@@ -24,17 +29,23 @@
   
   <url>
     <loc>https://CriminalTattoos.github.io/</loc>
-    <lastmod>2019-05-21T00:00:00+00:00</lastmod>
+    <lastmod>2020-12-21T00:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>https://CriminalTattoos.github.io/post/</loc>
-    <lastmod>2019-05-21T00:00:00+00:00</lastmod>
+    <lastmod>2020-12-21T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://CriminalTattoos.github.io/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://CriminalTattoos.github.io/tags/data/</loc>
+    <lastmod>2020-12-21T00:00:00+00:00</lastmod>
     <priority>0</priority>
   </url>
   

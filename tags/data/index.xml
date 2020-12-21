@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>data on Nineteenth-Century Criminal Tattoos</title>
+    <link>https://CriminalTattoos.github.io/tags/data/</link>
+    <description>Recent content in data on Nineteenth-Century Criminal Tattoos</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-gb</language>
+    <lastBuildDate>Mon, 21 Dec 2020 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://CriminalTattoos.github.io/tags/data/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Data Release: Tattoos in the Digital Panopticon Database, 1793-1925</title>
+      <link>https://CriminalTattoos.github.io/post/2020/12/21/data-release-tattoos-in-the-digital-panopticon-database-1793-1925/</link>
+      <pubDate>Mon, 21 Dec 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://CriminalTattoos.github.io/post/2020/12/21/data-release-tattoos-in-the-digital-panopticon-database-1793-1925/</guid>
+      <description>I’m delighted to be able to announce that we’ve shared the project data under a Creative Commons licence and it’s now available for download from the University of Sheffield data repository:
+Tattoos in the Digital Panopticon database, 1793-1925
+I’ll be blogging about this soon; here’s a taster of what’s to come…</description>
+    </item>
+    
+  </channel>
+</rss>
