@@ -19,7 +19,8 @@
       <guid>https://CriminalTattoos.github.io/post/2020/12/21/data-release-tattoos-in-the-digital-panopticon-database-1793-1925/</guid>
       <description>I’m delighted to be able to announce that we’ve shared the project data under a Creative Commons licence and it’s now available for download from the University of Sheffield data repository:
 Tattoos in the Digital Panopticon database, 1793-1925
-I’ll be blogging about this soon; here’s a taster of what’s to come…</description>
+I’ll be blogging about this soon; here’s a taster of what’s to come…
+body_term %&amp;gt;% select(subrecordid, term, body) %&amp;gt;% filter(!body %in% c(&amp;quot;unspecified&amp;quot;, &amp;quot;specifier&amp;quot;), str_length(term)&amp;gt;1) %&amp;gt;% count(body, name=&amp;quot;n_boddy&amp;quot;, sort=T) %&amp;gt;% top_n(12,n_boddy) %&amp;gt;% inner_join(body_term, by=&amp;quot;body&amp;quot;) %&amp;gt;% count(body, term, n_boddy) %&amp;gt;% group_by(body) %&amp;gt;% top_n(8, n) %&amp;gt;% ungroup %&amp;gt;% mutate(term = reorder_within(term, n, body)) %&amp;gt;% ggplot(aes(term, n, fill = body)) + geom_col(show.</description>
     </item>
     
   </channel>
