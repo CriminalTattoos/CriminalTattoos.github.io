@@ -20,6 +20,8 @@ a {
 
 h1, h2, h3, h4 {font-family:"Helvetica Neue", Helvetica, Arial, sans-serif;}
 
+h1 {line-height:110%;}
+
 .front-meta h1 {
   font-size:36px;
 }
