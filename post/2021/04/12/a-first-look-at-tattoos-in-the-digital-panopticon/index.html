@@ -309,6 +309,12 @@ descriptions_data &lt;-
 ## 1 n         118850
 ## 2 u          46909
 ## 3 y          75448</code></pre>
+<p>And I can quickly plot that…</p>
+<pre class="r"><code>descriptions_data %&gt;%
+  count(hastattoo) %&gt;%
+  mutate(hastattoo = fct_relevel(hastattoo, &quot;n&quot;, &quot;y&quot;)) %&gt;%
+  ggplot(aes(x=hastattoo, y=n)) +
+  geom_col()</code></pre>
 <p><img src="https://CriminalTattoos.github.io/post/2021/04/12/a-first-look-at-tattoos-in-the-digital-panopticon/index_files/figure-html/unnamed-chunk-9-1.png" width="95%" /></p>
 <p><code>desc_count</code> is the number of separate records for the individual person to whom the record belongs. Out of curiosity, how many individuals have more than one record?</p>
 <pre class="r"><code>descriptions_data %&gt;%
@@ -428,12 +434,12 @@ descriptions_filter_mutate_group_summarise %&gt;%
 ## 5 mpr        68
 ## 6 hcr        12</code></pre>
 <p>Now the list of the dataset names for the labels.</p>
-<pre class="r"><code>dataset_labels &lt;- c(&quot;Register of Habitual Criminals&quot;, &quot;Founders and Survivors&quot;, &quot;WA Convict Indents&quot;, &quot;Convict Licences&quot;, &quot;Millbank Prison Register&quot;, &quot;HO Criminal Registers&quot;)
+<pre class="r"><code>dataset_labels &lt;- c(&quot;HO Criminal Registers&quot;, &quot;Millbank Prison Register&quot;, &quot;Convict Licences&quot;,  &quot;WA Convict Indents&quot;,  &quot;Founders and Survivors&quot;, &quot;Register of Habitual Criminals&quot;)
 
 dataset_labels</code></pre>
-<pre><code>## [1] &quot;Register of Habitual Criminals&quot; &quot;Founders and Survivors&quot;        
-## [3] &quot;WA Convict Indents&quot;             &quot;Convict Licences&quot;              
-## [5] &quot;Millbank Prison Register&quot;       &quot;HO Criminal Registers&quot;</code></pre>
+<pre><code>## [1] &quot;HO Criminal Registers&quot;          &quot;Millbank Prison Register&quot;      
+## [3] &quot;Convict Licences&quot;               &quot;WA Convict Indents&quot;            
+## [5] &quot;Founders and Survivors&quot;         &quot;Register of Habitual Criminals&quot;</code></pre>
 <p>To make the chart I use a package called {ggplot2} (which is included in the Tidyverse so I don’t need to load it separately). ggplot is advertised as “a grammar of graphics”, which should give a sense of how it works - rather like Tidyverse R as a whole. The different elements or layers of a chart are coded in separate steps, including</p>
 <ul>
 <li><strong>geom_</strong> to set the type of chart (bar, line, dot, etc)</li>
