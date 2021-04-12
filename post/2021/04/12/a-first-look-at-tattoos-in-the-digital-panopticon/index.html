@@ -309,6 +309,7 @@ descriptions_data &lt;-
 ## 1 n         118850
 ## 2 u          46909
 ## 3 y          75448</code></pre>
+<p><img src="https://CriminalTattoos.github.io/post/2021/04/12/a-first-look-at-tattoos-in-the-digital-panopticon/index_files/figure-html/unnamed-chunk-9-1.png" width="95%" /></p>
 <p><code>desc_count</code> is the number of separate records for the individual person to whom the record belongs. Out of curiosity, how many individuals have more than one record?</p>
 <pre class="r"><code>descriptions_data %&gt;%
   filter(desc_count&gt;1) %&gt;% 
