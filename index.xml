@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Home on Nineteenth-Century Criminal Tattoos</title>
@@ -6,10 +6,16 @@
     <description>Recent content in Home on Nineteenth-Century Criminal Tattoos</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Mon, 21 Dec 2020 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://CriminalTattoos.github.io/index.xml" rel="self" type="application/rss+xml" />
-    
+    <lastBuildDate>Mon, 12 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://CriminalTattoos.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>A first look at tattoos in the Digital Panopticon</title>
+      <link>https://CriminalTattoos.github.io/post/2021/04/12/a-first-look-at-tattoos-in-the-digital-panopticon/</link>
+      <pubDate>Mon, 12 Apr 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://CriminalTattoos.github.io/post/2021/04/12/a-first-look-at-tattoos-in-the-digital-panopticon/</guid>
+      <description>Introduction This post is an introduction to, firstly, the newly-released Tattoos in the Digital Panopticon Database, 1793-1925; and, secondly, to the software and code being used to analyse the data.
+The dataset contains about 195,000 physical descriptions of convicts and prisoners. About 75,000 of these have been identified as containing tattoos, representing about 58,000 individuals (according to DP record linkage), and somewhere in the region of 350,000 discrete tattoos.</description>
+    </item>
     
     <item>
       <title>Data Release: Tattoos in the Digital Panopticon Database, 1793-1925</title>
