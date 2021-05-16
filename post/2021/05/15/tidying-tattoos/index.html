@@ -77,7 +77,7 @@
 <li>Each observation must have its own row.</li>
 <li>Each value must have its own cell.</li>
 </ul>
-<p>Data generally needs to be in a tidy format to work with R <a href="https://www.tidyverse.org/">Tidyverse</a> tools. But it isn’t necessarily the best format for data entry or storage, and very few real world datasets are tidy. So it’s almost always necessary to do some <em>tidying</em> as well as cleaning up more general messiness before being able to analyse data, and the Criminal Tattoos data is no exception. This post introduces just a couple of very common issues:</p>
+<p>Data usually needs to be in a tidy format to work with R <a href="https://www.tidyverse.org/">Tidyverse</a> tools. But it isn’t necessarily the best format for data entry or storage, and very few real world datasets are tidy. So it’s almost always necessary to do some <em>tidying</em> as well as cleaning up more general messiness before being able to analyse data, and the Criminal Tattoos data is no exception. This post introduces just a couple of very common issues:</p>
 <ul>
 <li>cleaning: missing data, which can be encoded in varying ways</li>
 <li>tidying: multiple values in a single cell</li>
@@ -388,7 +388,7 @@ tattoo_chunks_tattoos_unnest_tokens</code></pre>
   ggplot(aes(x=fct_reorder(design, n), y=n)) +
   geom_col() +
   coord_flip() +
-  labs(x=&quot;count&quot;, y=&quot;design&quot;, title=&quot;Top ten tattoo designs&quot;)</code></pre>
+  labs(y=&quot;count&quot;, x=NULL, title=&quot;Top ten tattoo designs&quot;)</code></pre>
 <p><img src="https://CriminalTattoos.github.io/post/2021/05/15/tidying-tattoos/index_files/figure-html/top-ten-designs-1.png" title="Horizontal bar chart of the ten most popular tattoo designs: dot, anchor, heart, ring, cross, woman, star, bracelet, clasped hands, sailor." alt="Horizontal bar chart of the ten most popular tattoo designs: dot, anchor, heart, ring, cross, woman, star, bracelet, clasped hands, sailor." width="672" /></p>
 <p>Which are the most popular body locations for tattoos? This needs more cleaning, but you get the gist.</p>
 <pre class="r"><code>tattoo_chunks_unnest_tokens_separated %&gt;%
@@ -398,7 +398,7 @@ tattoo_chunks_tattoos_unnest_tokens</code></pre>
   ggplot(aes(x=fct_reorder(body, n), y=n)) +
   geom_col() +
   coord_flip() +
-  labs(x=&quot;count&quot;, y=NULL, title=&quot;Top ten tattoo locations&quot;)</code></pre>
+  labs(y=&quot;count&quot;, x=NULL, title=&quot;Top ten tattoo locations&quot;)</code></pre>
 <p><img src="https://CriminalTattoos.github.io/post/2021/05/15/tidying-tattoos/index_files/figure-html/top-ten-tattoo-locations-1.png" title="Horizontal bar chart of the ten most popular body locations; needs more cleaning, but indicates that arms and hands are the most popular." alt="Horizontal bar chart of the ten most popular body locations; needs more cleaning, but indicates that arms and hands are the most popular." width="672" /></p>
 <p>And here’s one I cleaned up earlier…</p>
 </div>
