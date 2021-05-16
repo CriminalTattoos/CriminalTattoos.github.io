@@ -6,7 +6,17 @@
     <description>Recent content in Home on Nineteenth-Century Criminal Tattoos</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Mon, 12 Apr 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://CriminalTattoos.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 15 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://CriminalTattoos.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tidying Tattoos: Handling missing data and non-tidy columns</title>
+      <link>https://CriminalTattoos.github.io/post/2021/05/15/tidying-tattoos/</link>
+      <pubDate>Sat, 15 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://CriminalTattoos.github.io/post/2021/05/15/tidying-tattoos/</guid>
+      <description>What is “tidy data”? The data Missing data  a simple case more complex cases  Multiple values in one cell  a simple case more complex cases  Now what?   What is “tidy data”? “Tidy” data describes data that conforms to three rules:
+ Each variable must have its own column. Each observation must have its own row. Each value must have its own cell.</description>
+    </item>
+    
     <item>
       <title>A first look at tattoos in the Digital Panopticon</title>
       <link>https://CriminalTattoos.github.io/post/2021/04/12/a-first-look-at-tattoos-in-the-digital-panopticon/</link>
