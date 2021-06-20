@@ -6,7 +6,16 @@
     <description>Recent content in Posts on Nineteenth-Century Criminal Tattoos</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-gb</language>
-    <lastBuildDate>Sat, 15 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://CriminalTattoos.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 19 Jun 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://CriminalTattoos.github.io/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Come TogetheR: Combining data tables in R with dplyr join verbs</title>
+      <link>https://CriminalTattoos.github.io/post/2021/06/19/come-together-combining-data-tables-in-r/</link>
+      <pubDate>Sat, 19 Jun 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://CriminalTattoos.github.io/post/2021/06/19/come-together-combining-data-tables-in-r/</guid>
+      <description>Introduction Combining data The data Joining with dplyr  inner_join and left_join anti_join and semi_join do stuff inside the join function using multiple variables as a key joining summarised data  Now what? Resources  extending dplyr joins    Introduction Combining or joining data tables using a shared key (or ID) column is crucial for working with many kinds of datasets, but is not often well understood by historians.</description>
+    </item>
+    
     <item>
       <title>Tidying Tattoos: Handling missing data and non-tidy columns</title>
       <link>https://CriminalTattoos.github.io/post/2021/05/15/tidying-tattoos/</link>
