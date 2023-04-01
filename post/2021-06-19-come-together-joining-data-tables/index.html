@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.335">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Sharon Howard">
+<meta name="dcterms.date" content="2021-06-19">
+
+<title>Criminal Tattoos - Come TogetheR: Combining data tables in R with dplyr join verbs</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../favicon.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Criminal Tattoos</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../blog.html">
+ <span class="menu-text">Posts</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../resources.html">
+ <span class="menu-text">Resources</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/CriminalTattoos"><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/digipanoptic"><i class="bi bi-twitter" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="../../blog.xml"><i class="bi bi-rss-fill" role="img" aria-label="RSS">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#combining-data" id="toc-combining-data" class="nav-link" data-scroll-target="#combining-data">Combining data</a></li>
+  <li><a href="#the-data" id="toc-the-data" class="nav-link" data-scroll-target="#the-data">The data</a></li>
+  <li><a href="#joining-with-dplyr" id="toc-joining-with-dplyr" class="nav-link" data-scroll-target="#joining-with-dplyr">Joining with dplyr</a>
+  <ul class="collapse">
+  <li><a href="#inner_join-and-left_join" id="toc-inner_join-and-left_join" class="nav-link" data-scroll-target="#inner_join-and-left_join">inner_join and left_join</a></li>
+  <li><a href="#anti_join-and-semi_join" id="toc-anti_join-and-semi_join" class="nav-link" data-scroll-target="#anti_join-and-semi_join">anti_join and semi_join</a></li>
+  <li><a href="#do-stuff-inside-the-join-function" id="toc-do-stuff-inside-the-join-function" class="nav-link" data-scroll-target="#do-stuff-inside-the-join-function">do stuff inside the join function</a></li>
+  <li><a href="#using-multiple-variables-as-a-key" id="toc-using-multiple-variables-as-a-key" class="nav-link" data-scroll-target="#using-multiple-variables-as-a-key">using multiple variables as a key</a></li>
+  <li><a href="#joining-summarised-data" id="toc-joining-summarised-data" class="nav-link" data-scroll-target="#joining-summarised-data">joining summarised data</a></li>
+  </ul></li>
+  <li><a href="#now-what" id="toc-now-what" class="nav-link" data-scroll-target="#now-what">Now what?</a></li>
+  <li><a href="#resources" id="toc-resources" class="nav-link" data-scroll-target="#resources">Resources</a>
+  <ul class="collapse">
+  <li><a href="#extending-dplyr-joins" id="toc-extending-dplyr-joins" class="nav-link" data-scroll-target="#extending-dplyr-joins">extending dplyr joins</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Come TogetheR: Combining data tables in R with dplyr join verbs</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Sharon Howard </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">19 June 2021</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>Combining or <strong>joining</strong> data tables using a shared <strong>key</strong> (or ID) column is crucial for working with many kinds of datasets, but is not often well understood by historians.</p>
+<p>This is unfortunate, because many historical sources are too complex to fit comfortably into simple “rectangular” formats like spreadsheets. They contain what are known as “one-to-many” or even “many-to-many” relationships. An example of this from the Old Bailey Proceedings is that <em>one</em> trial (the main unit in the database) can contain</p>
+<ul>
+<li><em>many</em> defendants</li>
+<li><em>many</em> offences</li>
+<li><em>many</em> verdicts</li>
+<li><em>many</em> sentences</li>
+</ul>
+<p>But a tabular data format can only easily handle “one-to-one” relationships: one trial would have just one defendant, one offence, one verdict and one sentence.</p>
+<p>There are a couple of workarounds commonly used when entering data like this into a spreadsheet: you might put multiple items in one column, or add extra numbered columns (eg “offence_1”, “offence_2”, etc). The latter soon gets unwieldy if you need more than a couple of columns, and it’s difficult to analyse a variable that’s been spread across several different columns. The first approach can also be clumsy and is definitely not “tidy”, resulting in a mixed-up bag of things in a single column (my <a href="https://criminaltattoos.github.io/post/2021/05/15/tidying-tattoos/">previous post on tidying data</a> showed a way to deal with that problem).</p>
+<p>A common approach to storing more complex data like this is to use a <em>relational database</em> with several linked tables. The two data tables in the tattoos database are linked in this way, with a one-to-many relationship between the two data tables: the descriptions are the main unit of data, but the body segments data can contain several segments per description. However, in this case, a decision was made to duplicate much of the descriptions table information (mostly biographical) in the segments table, which largely removes any need for joins.</p>
+<p>But the downside is that all the duplicated information in the segments table takes up a lot of space and slows down importing data. I found this annoying, so I created a substantially slimmed-down version of the segments table by removing most of the description-level information that’s duplicated in the descriptions table. This reduced a 310 MB file to 87 MB! Then I use joins as and when I actually <em>need</em> data from both tables in an analysis. I’ll be using my skinny version of the data in examples in this post.</p>
+</section>
+<section id="combining-data" class="level2">
+<h2 class="anchored" data-anchor-id="combining-data">Combining data</h2>
+<p>There are in fact a number of different ways of combining data tables, horizontally or vertically. In R, one of them is more often known as “binding”, <a href="https://dplyr.tidyverse.org/reference/bind.html">by rows or columns</a>. A common use for {dplyr’s} <strong>bind_rows()</strong> function, which simply adds one table to the bottom of another table, is where collection of the same (or very similar) data source was split into separate tables.</p>
+<p>To combine two tables side-by-side, the equivalent is <strong>bind_cols()</strong>. But this can only be used where the two tables have exactly the same number of rows, and you have to be sure that your two tables are an exactly matching pair, with the rows on each side of the pair in the same order.</p>
+<p>“Joining” as defined here also combines two tables side-by-side. But other than that, it works quite differently. Unlike bind_cols(), the order of the rows in each table doesn’t matter, and they don’t even need to have the same number of rows. But they do have to contain at least one shared “key”.</p>
+<blockquote class="blockquote">
+<p><a href="https://r4ds.had.co.nz/relational-data.html#keys">A key</a> is a variable (or set of variables) that uniquely identifies an observation.</p>
+</blockquote>
+</section>
+<section id="the-data" class="level2">
+<h2 class="anchored" data-anchor-id="the-data">The data</h2>
+<p>First, I’ll load the R packages I need and the two data files, the original descriptions and the slimmed-down segments. (For more info about the dataset, <a href="https://criminaltattoos.github.io/post/2021/04/12/a-first-look-at-tattoos-in-the-digital-panopticon/">see the introductory post</a>.) The skinny segments data is available <a href="https://github.com/CriminalTattoos/code-data">here</a>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(scales)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidytext)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggthemes)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">theme_set</span>(<span class="fu">theme_minimal</span>())</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>descriptions_data <span class="ot">&lt;-</span> </span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">read_csv</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"_data"</span>, <span class="st">"convict_descriptions.2020-12-17.csv"</span>), <span class="at">guess_max =</span> <span class="dv">100000</span>)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>segments_data <span class="ot">&lt;-</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">read_csv</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"_data"</span>, <span class="st">"body_segments_20210327.csv"</span>), <span class="at">guess_max=</span><span class="dv">100000</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>For convenience, let’s make a couple of smaller subsets of the two tables. The <strong>shared key</strong> is the ID column <code>subrecordid</code>.</p>
+<p>I’ll keep all the rows from <code>segments</code>, but only the body and designs columns.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>segments <span class="ot">&lt;-</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>segments_data <span class="sc">%&gt;%</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(subrecordid, body, designs)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>segments</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 564,703 × 3
+   subrecordid body                designs                             
+   &lt;chr&gt;       &lt;chr&gt;               &lt;chr&gt;                               
+ 1 cin77589    right arm           Man and woman|stars|dog             
+ 2 cin77589    left arm            half|moon|stars|anchor|heart|diamond
+ 3 cin77590    right arm           &lt;NA&gt;                                
+ 4 cin77590    right hand          &lt;NA&gt;                                
+ 5 cin77591    corner|left|eyebrow &lt;NA&gt;                                
+ 6 cin77592    right arm           anchor                              
+ 7 cin77592    &lt;NA&gt;                &lt;NA&gt;                                
+ 8 cin77593    left hand           &lt;NA&gt;                                
+ 9 cin77594    neck                &lt;NA&gt;                                
+10 cin77595    corner|right eye    &lt;NA&gt;                                
+# … with 564,693 more rows</code></pre>
+</div>
+</div>
+<p>From <code>descriptions</code>, however, I’ll keep only those that contain tattoos, and the gender and year of birth columns.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>descriptions <span class="ot">&lt;-</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>descriptions_data <span class="sc">%&gt;%</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(hastattoo<span class="sc">==</span><span class="st">"y"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(subrecordid, gender, born) </span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>descriptions</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 75,448 × 3
+   subrecordid gender  born
+   &lt;chr&gt;       &lt;chr&gt;  &lt;dbl&gt;
+ 1 cin77589    m       1814
+ 2 cin77590    m       1820
+ 3 cin77592    m       1820
+ 4 cin77598    m       1824
+ 5 cin77603    m       1792
+ 6 cin77604    m       1814
+ 7 cin77609    m       1830
+ 8 cin77614    m       1815
+ 9 cin77616    m       1815
+10 cin77619    m       1820
+# … with 75,438 more rows</code></pre>
+</div>
+</div>
+</section>
+<section id="joining-with-dplyr" class="level2">
+<h2 class="anchored" data-anchor-id="joining-with-dplyr">Joining with dplyr</h2>
+<p>The {dplyr} package provides a range of <a href="https://dplyr.tidyverse.org/reference/join.html">*_join verbs/functions</a> for joining tables (which are quite similar to SQL joins, for anyone coming from SQL). In this post, I’ll look at four that I use most often.</p>
+<p>In the following examples, you should think of <code>segments</code> as the <em>left hand</em> side and <code>descriptions</code> as the <em>right hand</em> side of the joins.</p>
+<p>(NB that dplyr documentation refers to the right hand side as “x” and the left as “y”. R error messages - eg if you try to join on a non-existent key - will refer to “LHS” and “RHS”.)</p>
+<section id="inner_join-and-left_join" class="level3">
+<h3 class="anchored" data-anchor-id="inner_join-and-left_join">inner_join and left_join</h3>
+<p>These two are examples of what the dplyr docs refer to as <a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">mutating joins</a>, because they create new data tables.</p>
+<p>First up, <strong>inner_join()</strong>: this means that <em>only</em> rows in <code>segments</code> that have a matching <code>subrecordid</code> in <code>descriptions</code> are returned. The columns in <code>descriptions</code> are appended on the right. So I now have 5 columns but only 269205 rows, instead of the original 564703. Note how the information from <code>descriptions</code> is repeated where it has multiple matches in <code>segments</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>segments <span class="sc">%&gt;%</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">inner_join</span>(descriptions, <span class="at">by=</span><span class="st">"subrecordid"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 269,205 × 5
+   subrecordid body           designs                              gender  born
+   &lt;chr&gt;       &lt;chr&gt;          &lt;chr&gt;                                &lt;chr&gt;  &lt;dbl&gt;
+ 1 cin77589    right arm      Man and woman|stars|dog              m       1814
+ 2 cin77589    left arm       half|moon|stars|anchor|heart|diamond m       1814
+ 3 cin77590    right arm      &lt;NA&gt;                                 m       1820
+ 4 cin77590    right hand     &lt;NA&gt;                                 m       1820
+ 5 cin77592    right arm      anchor                               m       1820
+ 6 cin77592    &lt;NA&gt;           &lt;NA&gt;                                 m       1820
+ 7 cin77598    left arm       &lt;NA&gt;                                 m       1824
+ 8 cin77603    right|shoulder Crucifix                             m       1792
+ 9 cin77603    right arm      man and woman                        m       1792
+10 cin77603    right arm      &lt;NA&gt;                                 m       1792
+# … with 269,195 more rows</code></pre>
+</div>
+</div>
+<p>Using <strong>left_join()</strong>, however, <em>all</em> the rows in <code>segments</code> are returned. Where there isn’t a matching <code>subrecordid</code> in <code>descriptions</code>, the right hand columns will be empty. It’s useful because sometimes you’ll want to keep the whole of the left-hand data after the join, for example to make calculations or checks based on the presence or absence of the right hand data.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>segments <span class="sc">%&gt;%</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">left_join</span>(descriptions, <span class="at">by=</span><span class="st">"subrecordid"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 564,703 × 5
+   subrecordid body                designs                          gender  born
+   &lt;chr&gt;       &lt;chr&gt;               &lt;chr&gt;                            &lt;chr&gt;  &lt;dbl&gt;
+ 1 cin77589    right arm           Man and woman|stars|dog          m       1814
+ 2 cin77589    left arm            half|moon|stars|anchor|heart|di… m       1814
+ 3 cin77590    right arm           &lt;NA&gt;                             m       1820
+ 4 cin77590    right hand          &lt;NA&gt;                             m       1820
+ 5 cin77591    corner|left|eyebrow &lt;NA&gt;                             &lt;NA&gt;      NA
+ 6 cin77592    right arm           anchor                           m       1820
+ 7 cin77592    &lt;NA&gt;                &lt;NA&gt;                             m       1820
+ 8 cin77593    left hand           &lt;NA&gt;                             &lt;NA&gt;      NA
+ 9 cin77594    neck                &lt;NA&gt;                             &lt;NA&gt;      NA
+10 cin77595    corner|right eye    &lt;NA&gt;                             &lt;NA&gt;      NA
+# … with 564,693 more rows</code></pre>
+</div>
+</div>
+</section>
+<section id="anti_join-and-semi_join" class="level3">
+<h3 class="anchored" data-anchor-id="anti_join-and-semi_join">anti_join and semi_join</h3>
+<p>These are called <a href="https://dplyr.tidyverse.org/reference/filter-joins.html">“filtering” joins</a>. They <em>don’t</em> add the right-hand columns to the results. As the term suggests, they work in effect as filters, but instead of using criteria within the table you’re actually working on, the filtering behaviour is based on data in another table.</p>
+<p>I use <strong>anti_join()</strong> a lot: it returns the rows in the left-hand table that <em>don’t</em> have a match in the right-hand table. Apart from using it as a filter, it’s often really important when you’re checking and cleaning data - for example, for finding errors or inconsistencies in references that you need to use as keys.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>segments <span class="sc">%&gt;%</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">anti_join</span>(descriptions, <span class="at">by=</span><span class="st">"subrecordid"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 295,498 × 3
+   subrecordid body                designs
+   &lt;chr&gt;       &lt;chr&gt;               &lt;chr&gt;  
+ 1 cin77591    corner|left|eyebrow &lt;NA&gt;   
+ 2 cin77593    left hand           &lt;NA&gt;   
+ 3 cin77594    neck                &lt;NA&gt;   
+ 4 cin77595    corner|right eye    &lt;NA&gt;   
+ 5 cin77595    chin                &lt;NA&gt;   
+ 6 cin77595    inside|right|ear    &lt;NA&gt;   
+ 7 cin77596    top|forehead        &lt;NA&gt;   
+ 8 cin77596    over|right eye      &lt;NA&gt;   
+ 9 cin77597    left cheek          &lt;NA&gt;   
+10 cin77597    bone                &lt;NA&gt;   
+# … with 295,488 more rows</code></pre>
+</div>
+</div>
+<p>The second filtering join is <strong>semi_join()</strong>; it works like inner_join in that it returns only the left-hand rows that have a match on the right-hand side, but as with anti-join, it doesn’t append the right hand columns. You might wonder, what’s the point of that? But it’s faster and slightly easier if you simply want to use the join as a filter and don’t need any of the information in the right hand table.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>segments <span class="sc">%&gt;%</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">semi_join</span>(descriptions, <span class="at">by=</span><span class="st">"subrecordid"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 269,205 × 3
+   subrecordid body           designs                             
+   &lt;chr&gt;       &lt;chr&gt;          &lt;chr&gt;                               
+ 1 cin77589    right arm      Man and woman|stars|dog             
+ 2 cin77589    left arm       half|moon|stars|anchor|heart|diamond
+ 3 cin77590    right arm      &lt;NA&gt;                                
+ 4 cin77590    right hand     &lt;NA&gt;                                
+ 5 cin77592    right arm      anchor                              
+ 6 cin77592    &lt;NA&gt;           &lt;NA&gt;                                
+ 7 cin77598    left arm       &lt;NA&gt;                                
+ 8 cin77603    right|shoulder Crucifix                            
+ 9 cin77603    right arm      man and woman                       
+10 cin77603    right arm      &lt;NA&gt;                                
+# … with 269,195 more rows</code></pre>
+</div>
+</div>
+</section>
+<section id="do-stuff-inside-the-join-function" class="level3">
+<h3 class="anchored" data-anchor-id="do-stuff-inside-the-join-function">do stuff inside the join function</h3>
+<p>Because of the way that tidyverse “pipes” work, you can manipulate the right-hand table <em>inside</em> the join. Let’s say I’d like to look at only descriptions in the Register of Habitual Criminals dataset: I can do the filter before applying the join.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>segments <span class="sc">%&gt;%</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">inner_join</span>(descriptions_data <span class="sc">%&gt;%</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>               <span class="fu">filter</span>(dataset<span class="sc">==</span><span class="st">"rhc"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>               <span class="fu">select</span>(subrecordid, gender), <span class="at">by=</span><span class="st">"subrecordid"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 450,109 × 4
+   subrecordid body           designs gender
+   &lt;chr&gt;       &lt;chr&gt;          &lt;chr&gt;   &lt;chr&gt; 
+ 1 rhc1        right|nose     &lt;NA&gt;    f     
+ 2 rhc10       eyes           &lt;NA&gt;    m     
+ 3 rhc100      back|head      &lt;NA&gt;    m     
+ 4 rhc100      bottom|stomach &lt;NA&gt;    m     
+ 5 rhc100      right|neck     &lt;NA&gt;    m     
+ 6 rhc100      forehead       &lt;NA&gt;    m     
+ 7 rhc100      right hand     &lt;NA&gt;    m     
+ 8 rhc100      thigh          &lt;NA&gt;    m     
+ 9 rhc100      nose           &lt;NA&gt;    m     
+10 rhc100      left|thigh     &lt;NA&gt;    m     
+# … with 450,099 more rows</code></pre>
+</div>
+</div>
+</section>
+<section id="using-multiple-variables-as-a-key" class="level3">
+<h3 class="anchored" data-anchor-id="using-multiple-variables-as-a-key">using multiple variables as a key</h3>
+<p>Sometimes you need to join on more than one variable to ensure that your key is unique. In this case you have to combine the multiple keys in the by=“” argument into a vector using <code>c()</code> (<code>c("key1", "key2", "etc")</code>).</p>
+<p>(It doesn’t actually make any difference in this example; it’s just a demonstration. But it will matter in the following example.)</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>segments_data <span class="sc">%&gt;%</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(subrecordid, life_id, body) <span class="sc">%&gt;%</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">inner_join</span>(descriptions_data <span class="sc">%&gt;%</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>               <span class="fu">filter</span>(hastattoo<span class="sc">==</span><span class="st">"y"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>               <span class="fu">select</span>(subrecordid, life_id, gender), </span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>             <span class="at">by=</span><span class="fu">c</span>(<span class="st">"subrecordid"</span>, <span class="st">"life_id"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 269,205 × 4
+   subrecordid life_id  body           gender
+   &lt;chr&gt;       &lt;chr&gt;    &lt;chr&gt;          &lt;chr&gt; 
+ 1 cin77589    cin77589 right arm      m     
+ 2 cin77589    cin77589 left arm       m     
+ 3 cin77590    cin77590 right arm      m     
+ 4 cin77590    cin77590 right hand     m     
+ 5 cin77592    cin77592 right arm      m     
+ 6 cin77592    cin77592 &lt;NA&gt;           m     
+ 7 cin77598    cin77598 left arm       m     
+ 8 cin77603    cin77603 right|shoulder m     
+ 9 cin77603    cin77603 right arm      m     
+10 cin77603    cin77603 right arm      m     
+# … with 269,195 more rows</code></pre>
+</div>
+</div>
+</section>
+<section id="joining-summarised-data" class="level3">
+<h3 class="anchored" data-anchor-id="joining-summarised-data">joining summarised data</h3>
+<p>So far all these joins have involved joining single data points using an ID column. But that’s not your only option. You might, for example, join already summarised data on a shared categorical key.</p>
+<p>Let’s get counts of gender for descriptions with tattoos, per dataset.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>descriptions_gender_dataset_summary <span class="ot">&lt;-</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>descriptions_data <span class="sc">%&gt;%</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(hastattoo<span class="sc">==</span><span class="st">"y"</span>, dataset<span class="sc">!=</span><span class="st">"hcr"</span>, gender <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"m"</span>, <span class="st">"f"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(dataset, gender, <span class="at">name=</span><span class="st">"n_tattoos"</span>)</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>descriptions_gender_dataset_summary</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 11 × 3
+   dataset gender n_tattoos
+   &lt;chr&gt;   &lt;chr&gt;      &lt;int&gt;
+ 1 cin     m           2381
+ 2 fas     f           1687
+ 3 fas     m           9742
+ 4 fas_pgo f            331
+ 5 fas_pgo m           2321
+ 6 mpr     f              3
+ 7 mpr     m             65
+ 8 pld     f             79
+ 9 rhc     f           1535
+10 rhc     m          56396
+11 tlm     m            894</code></pre>
+</div>
+</div>
+<p>I want to compare the numbers that have tattoos with all descriptions, and one way I can do this is with a join.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>descriptions_gender_dataset_summary <span class="sc">%&gt;%</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">inner_join</span>(</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>    <span class="co"># counting inside the join</span></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>    descriptions_data <span class="sc">%&gt;%</span></span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>      <span class="fu">filter</span>(dataset<span class="sc">!=</span><span class="st">"hcr"</span>, gender <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"m"</span>, <span class="st">"f"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>      <span class="fu">count</span>(dataset, gender, <span class="at">name=</span><span class="st">"n_descriptions"</span>), </span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>    <span class="co"># join on both dataset *and* gender, or bad things will happen</span></span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">by=</span><span class="fu">c</span>(<span class="st">"dataset"</span>, <span class="st">"gender"</span>)</span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a> ) <span class="sc">%&gt;%</span></span>
+<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">percent =</span> n_tattoos<span class="sc">/</span>n_descriptions<span class="sc">*</span><span class="dv">100</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 11 × 5
+   dataset gender n_tattoos n_descriptions percent
+   &lt;chr&gt;   &lt;chr&gt;      &lt;int&gt;          &lt;int&gt;   &lt;dbl&gt;
+ 1 cin     m           2381           9719   24.5 
+ 2 fas     f           1687          13677   12.3 
+ 3 fas     m           9742          63151   15.4 
+ 4 fas_pgo f            331           2347   14.1 
+ 5 fas_pgo m           2321           8236   28.2 
+ 6 mpr     f              3            270    1.11
+ 7 mpr     m             65            643   10.1 
+ 8 pld     f             79            882    8.96
+ 9 rhc     f           1535          12969   11.8 
+10 rhc     m          56396         123005   45.8 
+11 tlm     m            894           6267   14.3 </code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="now-what" class="level2">
+<h2 class="anchored" data-anchor-id="now-what">Now what?</h2>
+<p>As in the <a href="https://criminaltattoos.github.io/post/2021/05/15/tidying-tattoos/">last post</a>, after joining I need to tidy designs onto separate lines…</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>segments_joined <span class="ot">&lt;-</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>segments <span class="sc">%&gt;%</span></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">inner_join</span>(descriptions, <span class="at">by=</span><span class="st">"subrecordid"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(designs)) <span class="sc">%&gt;%</span></span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">unnest_tokens</span>(design, designs, <span class="at">token=</span><span class="st">"regex"</span>, <span class="at">pattern=</span><span class="st">"</span><span class="sc">\\</span><span class="st">|"</span>)</span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>segments_joined</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 196,978 × 5
+   subrecordid body      gender  born design       
+   &lt;chr&gt;       &lt;chr&gt;     &lt;chr&gt;  &lt;dbl&gt; &lt;chr&gt;        
+ 1 cin77589    right arm m       1814 man and woman
+ 2 cin77589    right arm m       1814 stars        
+ 3 cin77589    right arm m       1814 dog          
+ 4 cin77589    left arm  m       1814 half         
+ 5 cin77589    left arm  m       1814 moon         
+ 6 cin77589    left arm  m       1814 stars        
+ 7 cin77589    left arm  m       1814 anchor       
+ 8 cin77589    left arm  m       1814 heart        
+ 9 cin77589    left arm  m       1814 diamond      
+10 cin77592    right arm m       1820 anchor       
+# … with 196,968 more rows</code></pre>
+</div>
+</div>
+<p>Now I can compare gendered differences in the most popular tattoo designs. (With a few issues: “letters” is probably not a design.)</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>segments_joined <span class="sc">%&gt;%</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(design, gender, <span class="at">sort=</span><span class="cn">TRUE</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(gender) <span class="sc">%&gt;%</span></span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">top_n</span>(<span class="dv">10</span>, n) <span class="sc">%&gt;%</span></span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">design =</span> <span class="fu">reorder_within</span>(design, n, gender)) <span class="sc">%&gt;%</span></span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>design, <span class="at">y=</span>n, <span class="at">fill=</span>gender)) <span class="sc">+</span></span>
+<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
+<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_flip</span>() <span class="sc">+</span></span>
+<span id="cb24-10"><a href="#cb24-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_reordered</span>() <span class="sc">+</span></span>
+<span id="cb24-11"><a href="#cb24-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_tableau</span>() <span class="sc">+</span></span>
+<span id="cb24-12"><a href="#cb24-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>gender, <span class="at">scales =</span> <span class="st">"free"</span>) <span class="sc">+</span></span>
+<span id="cb24-13"><a href="#cb24-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">y=</span><span class="st">"count"</span>, <span class="at">x=</span><span class="cn">NULL</span>, <span class="at">title=</span><span class="st">"Top ten tattoo designs by gender"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/top-ten-designs-gender-1.png" class="img-fluid" alt="Horizontal bar charts comparing the most popular tattoo designs for men and women. The top design for men is &quot;anchor&quot; and &quot;heart&quot; for women." width="672"></p>
+</div>
+</div>
+<p>And there are some striking variations in the proportions of male/female descriptions that have tattoos between different datasets.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>descriptions_gender_dataset_summary <span class="sc">%&gt;%</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">inner_join</span>(</span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>    descriptions_data <span class="sc">%&gt;%</span></span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>      <span class="fu">filter</span>(dataset<span class="sc">!=</span><span class="st">"hcr"</span>, gender <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"m"</span>, <span class="st">"f"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>      <span class="fu">count</span>(dataset, gender, <span class="at">name=</span><span class="st">"n_descriptions"</span>), </span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">by=</span><span class="fu">c</span>(<span class="st">"dataset"</span>, <span class="st">"gender"</span>)</span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a> ) <span class="sc">%&gt;%</span></span>
+<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">percent =</span> n_tattoos<span class="sc">/</span>n_descriptions) <span class="sc">%&gt;%</span></span>
+<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">dataset =</span> <span class="fu">case_when</span>(</span>
+<span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a>    dataset <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"pld"</span>, <span class="st">"tlm"</span>) <span class="sc">~</span> <span class="st">"pld"</span>,</span>
+<span id="cb25-11"><a href="#cb25-11" aria-hidden="true" tabindex="-1"></a>    <span class="cn">TRUE</span> <span class="sc">~</span> dataset</span>
+<span id="cb25-12"><a href="#cb25-12" aria-hidden="true" tabindex="-1"></a>  )) <span class="sc">%&gt;%</span></span>
+<span id="cb25-13"><a href="#cb25-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>dataset, <span class="at">y=</span>percent, <span class="at">fill=</span>gender)) <span class="sc">+</span></span>
+<span id="cb25-14"><a href="#cb25-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">position =</span> <span class="fu">position_dodge2</span>(<span class="at">preserve =</span> <span class="st">"single"</span>, <span class="at">padding =</span> <span class="dv">0</span>)) <span class="sc">+</span></span>
+<span id="cb25-15"><a href="#cb25-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span> <span class="fu">percent_format</span>()) <span class="sc">+</span></span>
+<span id="cb25-16"><a href="#cb25-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_tableau</span>() <span class="sc">+</span></span>
+<span id="cb25-17"><a href="#cb25-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">y=</span><span class="st">"% with tattoos"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section>
+<section id="resources" class="level2">
+<h2 class="anchored" data-anchor-id="resources">Resources</h2>
+<p><a href="https://towardsdatascience.com/a-beginners-guide-to-joining-data-935c8e579fb7">A beginner’s guide to joining data</a>.</p>
+<p><a href="https://r4ds.had.co.nz/relational-data.html">Relational data</a> - an essential detailed introduction to {dplyr} joins, by Hadley Wickham.</p>
+<p><a href="https://stat545.com/join-cheatsheet.html">STAT 545: Join two tables</a> for more examples and exercises.</p>
+<section id="extending-dplyr-joins" class="level3">
+<h3 class="anchored" data-anchor-id="extending-dplyr-joins">extending dplyr joins</h3>
+<p>When using {dplyr} joins, your key has to be an <em>exact</em> match. But sometimes you’ll find that what you want is a join function that allows for <em>inexact</em> matches. The <a href="http://varianceexplained.org/fuzzyjoin/index.html">fuzzyjoin</a> package does just that, but uses the same basic format as the joins above. It includes, for example, joins on numeric values, similar strings, regular expressions, and overlapping intervals.</p>
+<p>Another more specialised join package is <a href="https://hookedondata.org/introducing-the-funneljoin-package/">funneljoin</a> which may be useful where you want to analyse a sequence of events (eg, “maybe you’re interested in finding the people who visit a page and then register”). [NB: I haven’t tried this one yet.]</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

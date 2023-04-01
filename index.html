@@ -1,71 +1,214 @@
 <!DOCTYPE html>
-<html lang="en-gb">
-  <head>
-	<meta name="generator" content="Hugo 0.82.0" />
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Home | Nineteenth-Century Criminal Tattoos</title>
-    <link rel="stylesheet" href="/css/style.css" />
-    <link rel="stylesheet" href="/css/fonts.css" />
-    <link rel="icon" type="image/png" href="https://CriminalTattoos.github.io/favicon.png" />
-<meta property="og:site_name" content="Nineteenth-Century Criminal Tattoos" />
-<meta property="og:description" content="A data exploration and visualisation blog" />
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
-<meta property="og:type" content="website" />
-<meta property="og:title" content="Nineteenth-Century Criminal Tattoos" />
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.335">
 
-  </head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-  <body>
-    <nav>
-    <ul class="menu">
+
+<title>Criminal Tattoos - Nineteenth-Century Criminal Tattoos</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<link href="./favicon.png" rel="icon" type="image/png">
+<script src="site_libs/quarto-listing/list.min.js"></script>
+<script src="site_libs/quarto-listing/quarto-listing.js"></script>
+<script src="site_libs/quarto-html/quarto.js"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+<script>
+
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-date','listing-title',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
       
-      <li><a href="/">Home</a></li>
-      
-      <li><a href="/post/">Posts</a></li>
-      
-      <li><a href="/resources/">Resources</a></li>
-      
-      <li><a href="https://github.com/CriminalTattoos">GitHub</a></li>
-      
-      <li><a href="/index.xml">RSS</a></li>
-      
-    </ul>
+      searchColumns: ["listing-date","listing-title","listing-author"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Criminal Tattoos</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./blog.html">
+ <span class="menu-text">Posts</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./resources.html">
+ <span class="menu-text">Resources</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/CriminalTattoos"><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/digipanoptic"><i class="bi bi-twitter" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="./blog.xml"><i class="bi bi-rss-fill" role="img" aria-label="RSS">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
     </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#outputs" id="toc-outputs" class="nav-link" data-scroll-target="#outputs">Outputs</a></li>
+  <li><a href="#further-reading" id="toc-further-reading" class="nav-link" data-scroll-target="#further-reading">Further reading</a></li>
+  <li><a href="#credits" id="toc-credits" class="nav-link" data-scroll-target="#credits">Credits</a></li>
+  <li><a href="#re-use" id="toc-re-use" class="nav-link" data-scroll-target="#re-use">Re-use</a></li>
+  <li><a href="#posts" id="toc-posts" class="nav-link" data-scroll-target="#posts">Posts</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
 
-
-
-<div class="front-meta">
-
-      <h1>Nineteenth-Century Criminal Tattoos</h1>
-
-      <h2>A data exploration and visualisation blog</h2>
-
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Nineteenth-Century Criminal Tattoos</h1>
+<p class="subtitle lead">A data exploration and visualisation blog</p>
 </div>
 
 
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
 <p>Tattooing has a long history, but the practice increased significantly in Britain and Australia in the nineteenth century, when a growing number of criminal convicts acquired tattoos. Their many meanings include expressions of love, hope, pain, defiance, fraternity, and religious commitment, and aspirations to be fashionable. As a largely voluntary practice, tattooing provides valuable evidence of non-elite voices which are otherwise difficult to locate in the historical record.</p>
-<p>While tattooing has been the subject of a few studies, particularly of convicts transported to Tasmania (1802-53) and imprisoned in Ireland (1895-99), most research to date has been based on limited data and there is much that we still do not understand about the practice. While tattoos can be interpreted as expressions of convicts' individuality and aspirations, official practices of recording tattoos when documenting their physical characteristics can be seen as a form of state control. It is unclear why convicts engaged in a practice which facilitated such control, and whether the increasing use of tattooing signalled the growth of a defiant criminal subculture, or of more inclusive cultural aspirations.</p>
+<p>While tattooing has been the subject of a few studies, particularly of convicts transported to Tasmania (1802-53) and imprisoned in Ireland (1895-99), most research to date has been based on limited data and there is much that we still do not understand about the practice. While tattoos can be interpreted as expressions of convicts’ individuality and aspirations, official practices of recording tattoos when documenting their physical characteristics can be seen as a form of state control. It is unclear why convicts engaged in a practice which facilitated such control, and whether the increasing use of tattooing signalled the growth of a defiant criminal subculture, or of more inclusive cultural aspirations.</p>
 <p>The <a href="https://www.digitalpanopticon.org">Digital Panopticon</a>, launched in September 2017, brings together fifty existing datasets of criminal justice records for reuse, linking convict records together to enable life course analysis of over 250,000 convicts. There are approximately 60,000 descriptions of tattooed convicts in the Digital Panopticon, but the information is not currently systematically accessible, as it is intermixed with other physical details, such as eye colour, scars, bodily shape and physical infirmities, often using extensive abbreviations and inconsistent punctuation:</p>
-<blockquote>
-<p>Crucifix above elbow Joint rt arm deep dimple on chin Scar near outer corner rt eye Moon &amp; 7 stars JW mermaid anchor JC MD JD TD &amp; Cannon (Prop) inside rt arm  (James Rees, transported to Tasmania in 1826)</p>
+<blockquote class="blockquote">
+<p>Crucifix above elbow Joint rt arm deep dimple on chin Scar near outer corner rt eye Moon &amp; 7 stars JW mermaid anchor JC MD JD TD &amp; Cannon (Prop) inside rt arm (James Rees, transported to Tasmania in 1826)</p>
 </blockquote>
 <p>In addition to the challenge of extracting relevant information concerning tattoos from the highly varied physical description fields in the Digital Panopticon, a second technical challenge exists in coping with the complexity of the multiple variables available, and in summarising such voluminous and diverse data.</p>
-<p>Via Digital Panopticon&rsquo;s &lsquo;life archives&rsquo;, information about tattoos can be linked to a large amount of other evidence about the convict, including their gender, age, occupation, religion, place of origin, type of crime committed, previous convictions, and punishment. The Digital Panopticon has experimented with a number of visualisations to summarise this data and detect patterns, notably Sankey diagrams, pie charts, and specially developed &lsquo;life charts&rsquo;, but these formats are inadequate to the task of displaying complex multivariate data about convicts and their tattoos. The Tattoos project will use this blog to explore and experiment with techniques for visualising complex historical datasets.</p>
-<h2 id="outputs">Outputs</h2>
+<p>Via Digital Panopticon’s ‘life archives’, information about tattoos can be linked to a large amount of other evidence about the convict, including their gender, age, occupation, religion, place of origin, type of crime committed, previous convictions, and punishment. The Digital Panopticon has experimented with a number of visualisations to summarise this data and detect patterns, notably Sankey diagrams, pie charts, and specially developed ‘life charts’, but these formats are inadequate to the task of displaying complex multivariate data about convicts and their tattoos. The Tattoos project will use this blog to explore and experiment with techniques for visualising complex historical datasets.</p>
+</section>
+<section id="outputs" class="level2">
+<h2 class="anchored" data-anchor-id="outputs">Outputs</h2>
 <ul>
+<li>Alker, Zoe and Robert Shoemaker. ‘Convicts and the Cultural Significance of Tattooing in Nineteenth-Century Britain’. <em>Journal of British Studies</em> 61, no 4 (2022), 835–62. <a href="https://doi.org/10.1017/jbr.2022.117">https://doi.org/10.1017/jbr.2022.117</a></li>
 <li><a href="https://theconversation.com/how-tattoos-became-fashionable-in-victorian-england-122487">How tattoos became fashionable in Victorian England</a>, <em>The Conversation</em> (December 2019)</li>
 <li><a href="https://www.digitalpanopticon.org/Convict_tattoos">Convict Tattoos research page</a>, Digital Panopticon (2020)</li>
 <li>Selected visualisations for the Digital Panopticon <a href="https://www.digitalpanopticon.org/visualisations">Visualisations Gallery</a></li>
 <li>The data was incorporated into the Digital Panopticon database: see <a href="https://www.digitalpanopticon.org/Tattoos,_1793-1925">Tattoos, 1793-1925</a> (2020)</li>
 <li>Public release of the data: <a href="https://figshare.shef.ac.uk/articles/dataset/Tattoos_in_the_Digital_Panopticon_Database_1793-1925/13398665/1">Tattoos in the Digital Panopticon database, 1793-1925</a> (December 2020)</li>
 </ul>
-<p>work in progress:</p>
+<p>ongoing:</p>
 <ul>
-<li>a series of posts on this blog to introduce the data and methods for its analysis and visualisation (December 2020 onwards)</li>
-<li>two scholarly journal articles (to be published in 2021-2022)</li>
+<li>an occasional series of posts on this blog to introduce the data and methods for its analysis and visualisation (December 2020 onwards)</li>
+<li>further journal articles</li>
 </ul>
-<h2 id="further-reading">Further reading</h2>
+</section>
+<section id="further-reading" class="level2">
+<h2 class="anchored" data-anchor-id="further-reading">Further reading</h2>
 <ul>
 <li>Anderson, Clare, ‘Empire, Boundaries, and Bodies: colonial tattooing practices’ in Michael Sappol and Stephen P. Rice (eds), <em>A cultural history of the human body in the age of empire</em> (Oxford, 2010)</li>
 <li>Breathnach, Ciara and Elaine Farrell, ‘“Indelible Characters”: Tattoos, Power and the Late Nineteenth-Century Irish Convict Body’, <em>Cultural and Social History</em>, 12.2 (2015)</li>
@@ -74,72 +217,230 @@
 <li>Maxwell-Stewart, Hamish and James Bradley, ‘Convict tattoos: Tales of freedom and coercion’ in M Field and T Millett (eds), <em>Convict Love Tokens</em> (1998)</li>
 <li>Maxwell-Stewart, Hamish and James Bradley, ‘Power, Observation and the Tattooed Convict’ in <em>Australian Studies</em>, 12.1 (1997)</li>
 </ul>
-<h2 id="credits">Credits</h2>
+</section>
+<section id="credits" class="level2">
+<h2 class="anchored" data-anchor-id="credits">Credits</h2>
 <p>The project was funded by <a href="https://www.britac.ac.uk/ba-jisc-digital-research-in-the-humanities">British Academy/Jisc Digital Research in the Humanities</a> from 2018 to 2019.</p>
 <p>The project directors are <a href="https://www.sheffield.ac.uk/history/staff/robert-shoemaker">Robert Shoemaker, University of Sheffield</a>, and <a href="https://www.liverpool.ac.uk/sociology-social-policy-and-criminology/staff/zoe-alker/">Zoe Alker, University of Liverpool</a>.</p>
 <p>Project technical development is carried out by the <a href="https://www.dhi.ac.uk/">Digital Humanities Institute | Sheffield</a> • <a href="https://www.dhi.ac.uk/criminal-tattoos/">Project webpage</a>.</p>
 <p>This blog has been built by <a href="http://sharonhoward.org">Sharon Howard</a>, with a little help from <a href="https://www.rstudio.com/">RStudio</a>, <a href="https://bookdown.org/yihui/blogdown/">Blogdown</a>, <a href="https://daringfireball.net/projects/markdown/">Markdown</a> and <a href="https://github.com/">Github</a>.</p>
-<h2 id="re-use">Re-use</h2>
+</section>
+<section id="re-use" class="level2">
+<h2 class="anchored" data-anchor-id="re-use">Re-use</h2>
 <p>This website is licensed under a <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.</p>
-<h2 id="posts">Posts</h2>
-
-
-<ul>
-
-  
+</section>
+<section id="posts" class="level2">
+<h2 class="anchored" data-anchor-id="posts">Posts</h2>
 
 
 
+</section>
+
+<div class="quarto-listing quarto-listing-container-table" id="listing-listing">
+
+<table class="quarto-listing-table table">
+<thead>
+<tr>
+<th>
+Date
+</th>
+<th>
+Title
+</th>
+</tr>
+</thead>
+<tbody class="list">
+
+<tr data-index="0" data-listing-date-sort="1624057200000" data-listing-file-modified-sort="1680363919211" data-listing-reading-time-sort="9.24" data-listing-title-sort="Come TogetheR: Combining data tables in R with dplyr join verbs" data-listing-filename-sort="index.qmd">
+<td class="listing-date">
+Jun 19, 2021
+</td>
+<td class="listing-title">
+<a href="./post/2021-06-19-come-together-joining-data-tables/index.html" class="title">Come TogetheR: Combining data tables in R with dplyr join verbs</a>
+</td>
+</tr>
+<tr data-index="1" data-listing-date-sort="1621033200000" data-listing-file-modified-sort="1680363886653" data-listing-reading-time-sort="8.7" data-listing-title-sort="Tidying Tattoos: Handling missing data and non-tidy columns" data-listing-filename-sort="index.qmd">
+<td class="listing-date">
+May 15, 2021
+</td>
+<td class="listing-title">
+<a href="./post/2021-05-15-tidying-tattoos/index.html" class="title">Tidying Tattoos: Handling missing data and non-tidy columns</a>
+</td>
+</tr>
+<tr data-index="2" data-listing-date-sort="1618182000000" data-listing-file-modified-sort="1680362724760" data-listing-reading-time-sort="18.345" data-listing-title-sort="A first look at tattoos in the Digital Panopticon" data-listing-filename-sort="index.qmd">
+<td class="listing-date">
+Apr 12, 2021
+</td>
+<td class="listing-title">
+<a href="./post/2021-04-12-a-first-look-at-tattoos-in-the-digital-panopticon/index.html" class="title">A first look at tattoos in the Digital Panopticon</a>
+</td>
+</tr>
+<tr data-index="3" data-listing-date-sort="1608508800000" data-listing-file-modified-sort="1680362433072" data-listing-reading-time-sort="5.035" data-listing-title-sort="Data Release: Tattoos in the Digital Panopticon Database, 1793-1925" data-listing-filename-sort="index.qmd">
+<td class="listing-date">
+Dec 21, 2020
+</td>
+<td class="listing-title">
+<a href="./post/2020-12-21-data-release-tattoos-in-the-digital-panopticon-database-1793-1925/index.html" class="title">Data Release: Tattoos in the Digital Panopticon Database, 1793-1925</a>
+</td>
+</tr>
+<tr data-index="4" data-listing-date-sort="1558393200000" data-listing-file-modified-sort="1680362459204" data-listing-reading-time-sort="5.65" data-listing-title-sort="Tattoos Hackathon, 16 April 2019" data-listing-filename-sort="index.qmd">
+<td class="listing-date">
+May 21, 2019
+</td>
+<td class="listing-title">
+<a href="./post/2019-05-21-tattoos-hackathon-16-april-2019/index.html" class="title">Tattoos Hackathon, 16 April 2019</a>
+</td>
+</tr>
+<tr data-index="5" data-listing-date-sort="1541203200000" data-listing-file-modified-sort="1680362466518" data-listing-reading-time-sort="7.44" data-listing-title-sort="Introducing the Tattoos Project" data-listing-filename-sort="index.qmd">
+<td class="listing-date">
+Nov 3, 2018
+</td>
+<td class="listing-title">
+<a href="./post/2018-11-03-introduction/index.html" class="title">Introducing the Tattoos Project</a>
+</td>
+</tr>
+</tbody>
+
+</table>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div></main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
 
 
-  <li>
-    <span class="date">19 June 2021</span>:
-    <a href="https://CriminalTattoos.github.io/post/2021/06/19/come-together-combining-data-tables-in-r/">Come TogetheR: Combining data tables in R with dplyr join verbs</a>
-  </li>
-  
 
-  <li>
-    <span class="date">15 May 2021</span>:
-    <a href="https://CriminalTattoos.github.io/post/2021/05/15/tidying-tattoos/">Tidying Tattoos: Handling missing data and non-tidy columns</a>
-  </li>
-  
-
-  <li>
-    <span class="date">12 April 2021</span>:
-    <a href="https://CriminalTattoos.github.io/post/2021/04/12/a-first-look-at-tattoos-in-the-digital-panopticon/">A first look at tattoos in the Digital Panopticon</a>
-  </li>
-  
-
-  <li>
-    <span class="date">21 December 2020</span>:
-    <a href="https://CriminalTattoos.github.io/post/2020/12/21/data-release-tattoos-in-the-digital-panopticon-database-1793-1925/">Data Release: Tattoos in the Digital Panopticon Database, 1793-1925</a>
-  </li>
-  
-
-  <li>
-    <span class="date">21 May 2019</span>:
-    <a href="https://CriminalTattoos.github.io/post/2019/05/21/tattoos-hackathon-16-april-2019/">Tattoos Hackathon, 16 April 2019</a>
-  </li>
-  
-
-  <li>
-    <span class="date">03 November 2018</span>:
-    <a href="https://CriminalTattoos.github.io/post/2018/11/03/introduction/">Introducing the Tattoos Project</a>
-  </li>
-  
-</ul>
-
-  <footer>
-  <script src="//yihui.name/js/math-code.js"></script>
-<script async src="//mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML"></script>
-
-<script async src="//yihui.name/js/center-img.js"></script>
-
-  
-  <hr/>
-  <a href="http://sharonhoward.org">Sharon Howard</a> | Powered by <a href="https://bookdown.org/yihui/blogdown/">blogdown</a> and <a href="https://themes.gohugo.io/xmin/">XMin theme</a>
-  
-  </footer>
-  </body>
-</html>
-
+</body></html>

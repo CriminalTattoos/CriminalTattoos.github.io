@@ -1,0 +1,906 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.2.335">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Sharon Howard">
+<meta name="dcterms.date" content="2021-04-12">
+
+<title>Criminal Tattoos - A first look at tattoos in the Digital Panopticon</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../favicon.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Criminal Tattoos</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../blog.html">
+ <span class="menu-text">Posts</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../resources.html">
+ <span class="menu-text">Resources</span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/CriminalTattoos"><i class="bi bi-github" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://twitter.com/digipanoptic"><i class="bi bi-twitter" role="img">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="../../blog.xml"><i class="bi bi-rss-fill" role="img" aria-label="RSS">
+</i> 
+ <span class="menu-text"></span></a>
+  </li>  
+</ul>
+              <div id="quarto-search" class="" title="Search"></div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a></li>
+  <li><a href="#the-background" id="toc-the-background" class="nav-link" data-scroll-target="#the-background">The background</a></li>
+  <li><a href="#purpose-of-the-blog-posts" id="toc-purpose-of-the-blog-posts" class="nav-link" data-scroll-target="#purpose-of-the-blog-posts">Purpose of the blog posts</a>
+  <ul class="collapse">
+  <li><a href="#r-rmarkdown-and-the-tidyverse" id="toc-r-rmarkdown-and-the-tidyverse" class="nav-link" data-scroll-target="#r-rmarkdown-and-the-tidyverse">R, RMarkdown and the “Tidyverse”</a></li>
+  </ul></li>
+  <li><a href="#the-health-warnings" id="toc-the-health-warnings" class="nav-link" data-scroll-target="#the-health-warnings">The health warnings</a></li>
+  <li><a href="#the-convict-descriptions-data" id="toc-the-convict-descriptions-data" class="nav-link" data-scroll-target="#the-convict-descriptions-data">The convict descriptions data</a>
+  <ul class="collapse">
+  <li><a href="#identifiers" id="toc-identifiers" class="nav-link" data-scroll-target="#identifiers">identifiers</a></li>
+  <li><a href="#dp-datasets" id="toc-dp-datasets" class="nav-link" data-scroll-target="#dp-datasets">DP datasets</a></li>
+  <li><a href="#tattoos" id="toc-tattoos" class="nav-link" data-scroll-target="#tattoos">tattoos</a></li>
+  </ul></li>
+  <li><a href="#two-visualisations" id="toc-two-visualisations" class="nav-link" data-scroll-target="#two-visualisations">Two visualisations</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">A first look at tattoos in the Digital Panopticon</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Sharon Howard </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">12 April 2021</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
+
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction">Introduction</h2>
+<p>This post is an introduction to, firstly, the newly-released <a href="https://doi.org/10.15131/shef.data.13398665.v1">Tattoos in the Digital Panopticon Database, 1793-1925</a>; and, secondly, to the software and code being used to analyse the data.</p>
+<p>The dataset contains about 195,000 physical descriptions of convicts and prisoners. About 75,000 of these have been identified as containing tattoos, representing about 58,000 individuals (according to DP record linkage), and somewhere in the region of 350,000 discrete tattoos.</p>
+<p>The dataset is derived from types of source material that many historians are more likely to encounter than the narrative and printed texts that are common in Digital Humanities research: local and central registers, files, forms and other early modern and modern archival records which are full of information that is neither free-flowing prose nor quite structured enough to be easy to extract computationally. Such data is still most likely to be compiled laboriously by hand.</p>
+<p>We didn’t have the resources to do that, and this dataset simply can’t be as accurate as a manually-created one. Our goal was to make it <em>good enough</em> to use for large scale quantitative analysis, in which the imperfections taken as a whole are too small to significantly change results, and exploratory analyses that will help to provoke ideas and provide pointers to dig deeper into the mass of data.</p>
+<p>We’ve made the data openly available - all the descriptions, not just those in which we identified tattoos, and including the transcriptions as well as the extracted tattoo data - for several reasons:</p>
+<ul>
+<li>transparency about the limitations of the data</li>
+<li>aiding others to improve on our work</li>
+<li>facilitate testing of the project’s research findings</li>
+<li>enable other re-uses and explorations of the data</li>
+</ul>
+<p>The dataset also contains information that will aid users to locate the records at the Digital Panopticon website and from there, if desired, find digitised images of the originals (but note that in many cases the images are behind paywalls).</p>
+</section>
+<section id="the-background" class="level2">
+<h2 class="anchored" data-anchor-id="the-background">The background</h2>
+<p>The <a href="https://www.digitalpanopticon.org">Digital Panopticon 1780-1925</a> is an ambitious large-scale digital history project to investigate the relative impacts of different types of punishment on criminal desistance, health outcomes, employment opportunities, and family life over the long term, using record linkage on more than 50 existing and newly-digitised datasets including the Proceedings of the Old Bailey, Founders and Survivors, commercially digitised genealogical data on criminals and prisoners in 19th-century Britain, and civil data on births, marriages and deaths.</p>
+<p>The project’s central focus was on tens of thousands of Londoners sentenced to imprisonment or transportation at the Old Bailey between 1780 and 1885, though the nature of the data entailed collecting information on many more prisoners and convicts in Britain and Australia. Ultimately, the Digital Panopticon web resource, launched in September 2017, contained almost 4 million records dating from the mid 18th century to the early 20th century.</p>
+<p>Many of these datasets contain information relating to the physical characteristics of individuals. DP’s main interest in this kind of data was for <a href="https://www.digitalpanopticon.org/A_Guide_to_Researching_Biometrics">biometric analysis of heights and ages</a>. However, some records also contain much more detailed but less structured descriptions of “distinguishing marks”, including scars from injuries, marks of past diseases and corporal punishments, and more voluntarily acquired markings.</p>
+<p>Almost accidentally, DP created a huge database of tattooing practices in Britain and Australia from the end of the 18th century to the early 20th century, but one that was not easily usable because of the diverse, composite nature of the fields containing the material. The Criminal Tattoos project’s goal has been to find ways to make this information more accessible, and to explore ways of analysing and visualising it.</p>
+</section>
+<section id="purpose-of-the-blog-posts" class="level2">
+<h2 class="anchored" data-anchor-id="purpose-of-the-blog-posts">Purpose of the blog posts</h2>
+<p>This and subsequent blog posts aren’t primarily about the project’s research, which is introduced <a href="https://theconversation.com/how-tattoos-became-fashionable-in-victorian-england-122487">here</a> and is in the process of being submitted to journals. Instead, I have three main goals.</p>
+<p>One is to facilitate and encourage creative re-uses of the dataset (which is itself already the outcome of many re-uses, bringing together data created by several projects in different ways over almost two decades). I don’t think it’s enough to just release the data with technical documentation, and leave it at that. It isn’t a particularly easy dataset to work with, because of its size and complexity. So I’ll introduce some aspects of the data with examples of what I’ve been doing to inform the project research over the last 18 months.</p>
+<p>I’ll also use it to document at least some of the visualisations that we’ve already shared at the <a href="https://www.digitalpanopticon.org/visualisations">DP visualisations gallery</a>.</p>
+<p>A second (but related) goal is to make historians more aware of different ways of using visualisation techniques, beyond the familiar simple bar or line graph, especially for uncovering complex patterns in multivariate data.</p>
+<p>More specifically, I want to introduce the tools and methods I’ve been using to analyse and visualise the data, and to provide practical examples for historians, both for this and similar kinds of datasets. I hope to show how R can be an effective tool for working with complex historical datasets, and how it might be worth the time and effort needed to learn how to use it.</p>
+<p>(This doesn’t mean I think R is “better” than, say, Python or another language. I do think programming languages tend to have different strengths, not least the communities that have grown around them and the resources those communities create for them. My opinion is that Python is especially strong for processing and analysing large corpora of relatively unstructured texts (and in fact the extraction/processing side of the project was done using Python); where R is particularly useful for analysing and visualising large and complex but more structured data. Moreover, I’m currently much more competent and comfortable using R and the limited time available for this project meant I needed that. So R was a better fit for <em>this particular project</em>.)</p>
+<section id="r-rmarkdown-and-the-tidyverse" class="level3">
+<h3 class="anchored" data-anchor-id="r-rmarkdown-and-the-tidyverse">R, RMarkdown and the “Tidyverse”</h3>
+<p>All the posts are being written in <a href="https://rmarkdown.rstudio.com/">RMarkdown</a>, as notebooks that weave together narrative text and chunks of code. They are then turned into HTML webpages for the blog (but could alternatively be turned into Word docs, or PDFs, or presentation slides).</p>
+<p>Thus, the posts will include plenty of code and some explanations. However, they aren’t intended to be step-by-step tutorials of which there are plenty online. I recommend these as good starting points:</p>
+<ul>
+<li><a href="https://programminghistorian.org/en/lessons/r-basics-with-tabular-data">R Basics with Tabular Data (Programming Historian)</a></li>
+<li><a href="https://programminghistorian.org/en/lessons/data_wrangling_and_management_in_R">Data Wrangling and Management in R (Programming Historian)</a></li>
+<li>(which can be followed by various other R lessons at the Programming Historian)</li>
+</ul>
+<p>And this more comprehensive (free) guide book:</p>
+<ul>
+<li><a href="https://r4ds.had.co.nz/">R for Data Science (Hadley Wickham)</a></li>
+</ul>
+<p>Nonetheless I think I should set out a few of the basic concepts here. I’m using a particular variant of the wider R ecosystem, which works by linking together a sequence of verbal commands with a “pipe” symbol <strong>%&gt;%</strong>. The core functions - like “verbs” - for the work of tidying, reshaping, grouping and summarising data for quantitative analysis are:</p>
+<ul>
+<li><strong>select()</strong> - specify <em>columns</em> in the data table to work with (useful if there are a lot of them!)</li>
+<li><strong>filter()</strong> - limit analysis to specified <em>rows</em> of data</li>
+<li><strong>arrange()</strong> - re-sort them</li>
+<li><strong>mutate()</strong> - create new columns, by doing some operation on the existing columns</li>
+<li><strong>summarise()</strong> - collapse many values down to a single summary value</li>
+<li><strong>group_by()</strong> - group rows of data together in preparation for some further summarise/mutate command</li>
+<li><strong>..._join()</strong> - a set of verbs for linking related tables together</li>
+</ul>
+<p>(I find this flavour of R particularly congenial because I came to the language from using MySQL, which operates in a similar way. Others are available.)</p>
+<p>Some other R terminology:</p>
+<ul>
+<li><strong>object</strong>: objects can be all sorts of things in R, from a single number to a string of characters to a data table to a nested list of things, and other highly specialised data formats; but the key feature is that they’ve been named and saved for re-use in a script, so you can for example avoid having to re-import a file every time you want to do something to it</li>
+<li><strong>package</strong>: like many modern programming languages and software tools, R has a relatively limited core functionality (“base R”) which is then extended by third-party developers to provide convenient tools for particular uses. Most readers will be familiar with this concept even if they have different names in different tools - extensions, plugins, libraries, etc. In R <em>packages</em> is the usual term, often denoted by writing the name in {curly brackets}. (You can also get data packages which bundle up datasets in a convenient ready-made R format.)</li>
+</ul>
+</section>
+</section>
+<section id="the-health-warnings" class="level2">
+<h2 class="anchored" data-anchor-id="the-health-warnings">The health warnings</h2>
+<p>Users of the data should be aware from the outset that the dataset is a very long way from perfect; extracting tattoos from the descriptions was a major challenge for a small project with limited funding. It is likely that many tattoos (especially the “long tail” of rare tattoo designs) have been missed, and conversely things that were not tattoos have been misidentified. The process aimed not simply to find tattoos but also to associate them with body locations, and this could also go wrong in various ways.</p>
+<p>The extraction methodology is described in some detail <a href="https://www.digitalpanopticon.org/Tattoos,_1793-1925">on the DP website</a>, so I’m not going to repeat it here. But this is the sort of thing the project had to grapple with (tattoo elements highlighted):</p>
+<blockquote class="blockquote">
+<p><strong>Crucifix above elbow Joint rt arm</strong> deep dimple on chin Scar near outer corner rt eye <strong>Moon &amp; 7 stars JW mermaid anchor JC MD JD TD &amp; Cannon (Prop) inside rt arm</strong> [<a href="https://www.digitalpanopticon.org/life?id=obpt18250915-266-defend1341">James Rees</a>, transported to Tasmania 1826]</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>Scar forehead, right eyebrow, right ear, left cheek, left side of nose, both sides of neck, lip, right arm elbow, right leg, right shoulder. <strong>I.L.M.K Liverpool E.R on right arm</strong>, ears pierced, lost several teeth. [<a href="https://www.digitalpanopticon.org/life?id=obpdef1-626-18770807">Bridget Lacking</a>, sentenced to penal servitude 1881]</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>scar right cheek and several back and loins ; <strong>female and barge left forearm ; half bracelet left wrist;</strong> birthniark left groin. [<a href="https://www.digitalpanopticon.org/life?id=rhc48452">Henry Palmer</a>, register of habitual criminals 1899 and 1901]</p>
+</blockquote>
+<p>There are various problems. They’re a rather undifferentiated stream of small pieces of information, not in any fixed order, not all tattoos, and on occasion not actually about physical characteristics at all. Punctuation is unreliable, if it’s used at all. Abbreviations (such as “r” or “rt” for right and of course “&amp;” for and) are very common and also quite variable. There can, of course, also be transcription errors.</p>
+<p>If a person had several tattoos on one part of the body, they’d usually be grouped together, so attaching a design to the right location is also not a simple exercise (oh, and the body part might sometimes be written before the tattoos, rather than afterwards as in these examples).</p>
+<p>Even after isolating tattoos from other strings of text, it often isn’t easy to define a single “tattoo”. You need to know that “Moon &amp; 7 stars” is a religious symbol and so probably <em>not</em> two separate tattoos. It’s one of many phrases that have been identified as such. But what about something like “female and barge”? This might have been something like a picture of a woman on a barge or might be two separate tattoos “a woman” and “a barge”; in the data it’s the latter. There’s no way we could identify every possible phrase or combination of things that were originally a single tattoo design.</p>
+<p>And it must be emphasised that in the vast majority of cases we have no idea what the tattoos actually looked like. (In a very few cases the original records contain tiny sketched drawings of the tattoos, which have been transcribed as text if they could be interpreted.) The data is entirely based on written descriptions, written down by many different officials over a long period of time, with undoubtedly hugely varying degrees of diligence and competence.</p>
+</section>
+<section id="the-convict-descriptions-data" class="level2">
+<h2 class="anchored" data-anchor-id="the-convict-descriptions-data">The convict descriptions data</h2>
+<p>The dataset contains two CSV files. Here I’m focusing on <strong>convict_descriptions</strong>, which contains 241207 rows of data. The second, <strong>convict_description_segments</strong> has more detailed information about the bodily locations of tattoos; I’ll get to that in a later post.</p>
+<p>The first thing to do is load the R packages needed for analysis using the <code>library()</code> function. For now, I just want one, {tidyverse}, though that’s really a big convenience package of related sub-packages.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># the # is used to insert comments, so R will ignore them when it executes the code</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co"># this helps to remind you what on earth you were trying to do, when you have to read your code again later</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># or to enable other people reading your code to understand what you're trying to do</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># the library() function is used to load packages that aren't part of the R core. </span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Next, import the data (with the <code>read_csv()</code> function). (An important principle here is that you import a <em>copy</em> of your data and then work with it entirely inside R; you don’t do <em>anything</em> to the original data file.)</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># &lt;-  is used to create a new object</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>descriptions_data <span class="ot">&lt;-</span> </span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">read_csv</span>(here<span class="sc">::</span><span class="fu">here</span>(<span class="st">"_data"</span>, <span class="st">"convict_descriptions.2020-12-17.csv"</span>), <span class="at">guess_max =</span> <span class="dv">100000</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Now I can take a <code>glimpse()</code> at it: there is a lot of stuff in there. 42 columns of data!</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>descriptions_data <span class="sc">%&gt;%</span> </span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">glimpse</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 241,207
+Columns: 42
+$ subrecordid                      &lt;chr&gt; "cin77589", "cin77590", "cin77591", "…
+$ recordid                         &lt;chr&gt; "cin77589", "cin77590", "cin77591", "…
+$ life_id                          &lt;chr&gt; "cin77589", "cin77590", "cin77591", "…
+$ descyear                         &lt;dbl&gt; 1850, 1850, 1850, 1850, 1850, 1850, 1…
+$ dataset                          &lt;chr&gt; "cin", "cin", "cin", "cin", "cin", "c…
+$ hastattoo                        &lt;chr&gt; "y", "y", "n", "y", "n", "n", "n", "n…
+$ haspunishmentmark                &lt;chr&gt; "n", "n", "n", "n", "n", "n", "n", "n…
+$ desc_count                       &lt;dbl&gt; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1…
+$ designs                          &lt;chr&gt; "anchor|dog|moon|man and woman|diamon…
+$ writtenwords                     &lt;chr&gt; "IMB|ST", "JP|CPEP", NA, "EM|LARK", N…
+$ writtenyears                     &lt;chr&gt; "1838", NA, NA, NA, NA, NA, NA, NA, N…
+$ punishmentmarks                  &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, N…
+$ body                             &lt;chr&gt; "right arm|left arm", "right hand|rig…
+$ digest                           &lt;chr&gt; "[right arm : man and woman|sun|dog|S…
+$ subjects                         &lt;chr&gt; "love year astronomy namesinitials pl…
+$ url                              &lt;chr&gt; "https://www.digitalpanopticon.org/li…
+$ fulldescription                  &lt;chr&gt; "Man and woman, 2 stars, 1 dog, ST 18…
+$ given                            &lt;chr&gt; "Samuel", "John", "William", "John", …
+$ surname                          &lt;chr&gt; "Scattergood", "Patience", "Branson",…
+$ gender                           &lt;chr&gt; "m", "m", "m", "m", "m", "m", "m", "m…
+$ born                             &lt;dbl&gt; 1814, 1820, 1817, 1820, 1824, 1826, 1…
+$ transported                      &lt;chr&gt; "yes", "yes", "yes", "yes", "yes", "y…
+$ ticket_of_leave                  &lt;chr&gt; "no", "no", "no", "no", "no", "no", "…
+$ penalservitude                   &lt;chr&gt; "no", "no", "no", "no", "no", "no", "…
+$ granted_prison_license           &lt;chr&gt; "no", "no", "no", "no", "no", "no", "…
+$ married                          &lt;chr&gt; "unknown", "unknown", "unknown", "unk…
+$ insane                           &lt;chr&gt; "no", "no", "no", "no", "no", "no", "…
+$ in_hulks                         &lt;chr&gt; "unknown", "unknown", "unknown", "unk…
+$ religion                         &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, N…
+$ religion_category                &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, N…
+$ occupation                       &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, N…
+$ occupation_top_50                &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, N…
+$ hisco                            &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, N…
+$ place_of_birth                   &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, N…
+$ ship                             &lt;chr&gt; "scindian", "scindian", "scindian", "…
+$ earliest_trial_offence_category  &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, N…
+$ earliest_trial_sentence_category &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, N…
+$ latest_trial_offence_category    &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, N…
+$ latest_trial_sentence_category   &lt;chr&gt; NA, NA, NA, NA, NA, NA, NA, NA, NA, N…
+$ trials                           &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0…
+$ earliest_trial                   &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0…
+$ latest_trial                     &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0…</code></pre>
+</div>
+</div>
+<p>That’s because, as well as the descriptions and tattoos, we included various pieces of information about the individuals drawn from the DP database. Very often, this has come from the same record as the description (if a record was detailed enough to contain physical descriptions, it probably also had quite a lot of other personal information). Some of it, on the other hand, is drawn from a larger <strong>life archive</strong> of linked records for an individual. (You can read the dataset documentation for more detail.) I’m going to ignore most of it in this post. But at least a few explanations are in order now.</p>
+<section id="identifiers" class="level3">
+<h3 class="anchored" data-anchor-id="identifiers">identifiers</h3>
+<p>There are <em>three</em> ID columns, all based on Digital Panopticon’s own IDs. Generally you’ll only need to work with two of them.</p>
+<ul>
+<li><code>subrecordid</code> is the unique identifier for each record in the table</li>
+<li><code>life_id</code> is the ID for a <em>person</em>, more precisely what DP calls a “life archive”, which links together all the records for the same individual (we hope; and in practice, we have only a single record for many individuals).</li>
+</ul>
+<p>It can be quite important to bear in mind the distinctions between <em>people</em>, <em>records</em>, <em>descriptions</em> and <em>tattoos</em> in the data. One record = one row in the table. A person can have multiple records, not all of which contain a description, and descriptions don’t all contain any tattoos.</p>
+<p>(The third ID column is <code>recordid</code> and this is nearly - but not quite - always identical to <code>subrecordid</code>. You’re <em>very</em> unlikely to need it. The reason it exists separately is because some records have come from complex relational databases in which an individual could have several description records, from different tables. Thus the <code>recordid</code> is the ID for that database record as a whole, whereas <code>subrecordid</code> gives each of the descriptions a unique identifier.)</p>
+<p>So, how many individual <em>people</em> (according to DP’s record linkage) and how many records in total are there in the dataset?</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>descriptions_data <span class="sc">%&gt;%</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="co"># n_distinct() is a function to count *unique* values; n() counts *all* values</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">n_life_id =</span> <span class="fu">n_distinct</span>(life_id), </span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>            <span class="at">n_total =</span> <span class="fu">n</span>()</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>            )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 2
+  n_life_id n_total
+      &lt;int&gt;   &lt;int&gt;
+1    193460  241207</code></pre>
+</div>
+</div>
+</section>
+<section id="dp-datasets" class="level3">
+<h3 class="anchored" data-anchor-id="dp-datasets">DP datasets</h3>
+<p>The column <code>dataset</code> is the short code for each… errmmm… dataset in the… errrmmm… dataset. (Perhaps we didn’t think some of the naming through as well as we could have done.) In fact this refers to <a href="https://www.digitalpanopticon.org/Records">the datasets in the Digital Panopticon</a>. Just to confuse everyone a bit further, they’re grouped slightly differently here, so we’ve got 8 datasets where there are only six in DP itself.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>descriptions_data <span class="sc">%&gt;%</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">distinct</span>(dataset) <span class="sc">%&gt;%</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(dataset)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 8 × 1
+  dataset
+  &lt;chr&gt;  
+1 cin    
+2 fas    
+3 fas_pgo
+4 hcr    
+5 mpr    
+6 pld    
+7 rhc    
+8 tlm    </code></pre>
+</div>
+</div>
+<p>In DP, fas + fas_pgo are treated as a single dataset, as are pld + tlm. The full names are in the Tattoos database documentation, though I’ll be coming back to them briefly before the end of the post.</p>
+<p>How many descriptions are there in each dataset? For this I need to use <code>group_by()</code>, to group together rows from the same dataset, before I can <code>summarise()</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>descriptions_data <span class="sc">%&gt;%</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(dataset) <span class="sc">%&gt;%</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">n_records =</span> <span class="fu">n</span>()) <span class="sc">%&gt;%</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 8 × 2
+  dataset n_records
+  &lt;chr&gt;       &lt;int&gt;
+1 cin          9719
+2 fas         76830
+3 fas_pgo     10587
+4 hcr            12
+5 mpr           914
+6 pld           882
+7 rhc        135996
+8 tlm          6267</code></pre>
+</div>
+</div>
+<p>But I can also - and most often do because it’s shorter and I’m lazy - do exactly the same thing with another handy function, <code>count()</code>. (<code>sort=TRUE</code> is ordering the results by count rather than alphabetically.)</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>descriptions_data <span class="sc">%&gt;%</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(dataset, <span class="at">name=</span><span class="st">"n_records"</span>, <span class="at">sort=</span><span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 8 × 2
+  dataset n_records
+  &lt;chr&gt;       &lt;int&gt;
+1 rhc        135996
+2 fas         76830
+3 fas_pgo     10587
+4 cin          9719
+5 tlm          6267
+6 mpr           914
+7 pld           882
+8 hcr            12</code></pre>
+</div>
+</div>
+<p>They vary somewhat in size!</p>
+</section>
+<section id="tattoos" class="level3">
+<h3 class="anchored" data-anchor-id="tattoos">tattoos</h3>
+<p>There are <em>nine</em> columns related to the actual descriptions and tattoos extracted from them.</p>
+<ul>
+<li><code>hastattoo</code></li>
+<li><code>designs</code></li>
+<li><code>writtenwords</code></li>
+<li><code>writtenyears</code></li>
+<li><code>body</code></li>
+<li><code>digest</code></li>
+<li><code>subjects</code></li>
+<li><code>fulldescription</code></li>
+<li><code>desc_count</code></li>
+</ul>
+<p><code>hastattoo</code> tells you a) whether there is text in the description field (“u” means that it’s blank) and b) whether we identified any tattoos in the description if present (“y” for yes; “n” for no).</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>descriptions_data <span class="sc">%&gt;%</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(hastattoo)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 2
+  hastattoo      n
+  &lt;chr&gt;      &lt;int&gt;
+1 n         118850
+2 u          46909
+3 y          75448</code></pre>
+</div>
+</div>
+<p>And I can quickly plot that…</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>descriptions_data <span class="sc">%&gt;%</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(hastattoo) <span class="sc">%&gt;%</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">hastattoo =</span> <span class="fu">fct_relevel</span>(hastattoo, <span class="st">"n"</span>, <span class="st">"y"</span>)) <span class="sc">%&gt;%</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>hastattoo, <span class="at">y=</span>n)) <span class="sc">+</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p><code>desc_count</code> is the number of separate records for the individual person to whom the record belongs. Out of curiosity, how many individuals have more than one record?</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>descriptions_data <span class="sc">%&gt;%</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(desc_count<span class="sc">&gt;</span><span class="dv">1</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">n=</span><span class="fu">n_distinct</span>(life_id))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 1
+      n
+  &lt;int&gt;
+1 24127</code></pre>
+</div>
+</div>
+<p>I don’t tend to use desc_count, because I can calculate it for myself using life_id. But it’s quite handy for some questions.</p>
+<p>What’s the top number of records for one individual?</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>descriptions_data <span class="sc">%&gt;%</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(life_id) <span class="sc">%&gt;%</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">top_n</span>(<span class="dv">1</span>, n)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 2
+  life_id     n
+  &lt;chr&gt;   &lt;int&gt;
+1 fas2916    50</code></pre>
+</div>
+</div>
+<p>How many records do most individuals have?</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>descriptions_data <span class="sc">%&gt;%</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">distinct</span>(life_id, desc_count) <span class="sc">%&gt;%</span></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(desc_count, <span class="at">name=</span><span class="st">"n_records"</span>, <span class="at">sort =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(desc_count<span class="sc">&lt;=</span><span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 10 × 2
+   desc_count n_records
+        &lt;dbl&gt;     &lt;int&gt;
+ 1          1    169333
+ 2          2     14009
+ 3          3      4981
+ 4          4      2244
+ 5          5      1201
+ 6          6       670
+ 7          7       368
+ 8          8       204
+ 9          9       129
+10         10        82</code></pre>
+</div>
+</div>
+<p>How many records containing descriptions do most have?</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>descriptions_data <span class="sc">%&gt;%</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(hastattoo <span class="sc">!=</span><span class="st">"u"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>  <span class="co"># filter(!is.na(fulldescription)) would give the same result</span></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">distinct</span>(life_id, desc_count) <span class="sc">%&gt;%</span></span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(desc_count, <span class="at">name=</span><span class="st">"n_records_with_desc"</span>, <span class="at">sort =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(desc_count<span class="sc">&lt;=</span><span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 10 × 2
+   desc_count n_records_with_desc
+        &lt;dbl&gt;               &lt;int&gt;
+ 1          1              129122
+ 2          2               13525
+ 3          3                4907
+ 4          4                2222
+ 5          5                1192
+ 6          6                 664
+ 7          7                 364
+ 8          8                 204
+ 9          9                 129
+10         10                  82</code></pre>
+</div>
+</div>
+<p>How many records containing tattoos?</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>descriptions_data <span class="sc">%&gt;%</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(hastattoo <span class="sc">==</span><span class="st">"y"</span>) <span class="sc">%&gt;%</span> </span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>  <span class="co"># filter(!is.na(fulldescription)) would give the same answer</span></span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">distinct</span>(life_id, desc_count) <span class="sc">%&gt;%</span></span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(desc_count, <span class="at">name=</span><span class="st">"n_records_with_tattoos"</span>, <span class="at">sort =</span> <span class="cn">TRUE</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(desc_count<span class="sc">&lt;=</span><span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 10 × 2
+   desc_count n_records_with_tattoos
+        &lt;dbl&gt;                  &lt;int&gt;
+ 1          1                  45363
+ 2          2                   6570
+ 3          3                   2738
+ 4          4                   1313
+ 5          5                    728
+ 6          6                    423
+ 7          7                    224
+ 8          8                    122
+ 9          9                     81
+10         10                     55</code></pre>
+</div>
+</div>
+<p><code>subjects</code> refers to a set of broad categories for tattoos (eg “nationalidentity” or “pleasure”); they’re a bit different from the rest in that project staff manually decided on the assignment of subjects to tattoo designs. You should be aware that it’s a summary of all the subjects for the description, not just for a single tattoo, and the column can contain a list of several subjects.</p>
+<p><code>fulldescription</code> is the original transcription of the description; <code>designs</code>, <code>writtenwords</code> and <code>writtenyears</code> are tattoo classifications; <code>body</code> and <code>digest</code> both relate to the location of tattoos on the body.</p>
+<p>Finally, there are various pieces of demographic and offending history (eg gender, birth place) drawn from the DP records.</p>
+</section>
+</section>
+<section id="two-visualisations" class="level2">
+<h2 class="anchored" data-anchor-id="two-visualisations">Two visualisations</h2>
+<p>I want to finish this post by reproducing two visualisations I made for the <a href="https://www.digitalpanopticon.org/Tattoos,_1793-1925">project’s page at DP</a>.</p>
+<p>First, there was a bar chart of the number of tattooed people per dataset:</p>
+<p><img src="images/bar_convicts_tattooed_by_dataset.png" class="img-fluid"></p>
+<p>The steps for this are as follows</p>
+<ul>
+<li>filter to use only descriptions with tattoos</li>
+<li>recode the dataset names where needed before grouping them</li>
+<li>count unique life ids (so I get the number of people, not the number of descriptions)</li>
+<li>make nice labels</li>
+<li>make the chart</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>descriptions_filter_mutate_group_summarise <span class="ot">&lt;-</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>descriptions_data <span class="sc">%&gt;%</span></span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(hastattoo<span class="sc">==</span><span class="st">"y"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>    <span class="co"># case_when() enables you to change data depending on specified conditions</span></span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">dataset =</span> <span class="fu">case_when</span>(</span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>    dataset <span class="sc">==</span><span class="st">"tlm"</span> <span class="sc">~</span> <span class="st">"pld"</span>,  <span class="co"># if the dataset = tlm, change to pld (ie, merging them together)</span></span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a>    dataset <span class="sc">==</span><span class="st">"fas_pgo"</span> <span class="sc">~</span> <span class="st">"fas"</span>, <span class="co"># change fas_pgo to fas</span></span>
+<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a>    <span class="cn">TRUE</span> <span class="sc">~</span> dataset  <span class="co"># otherwise, leave unchanged</span></span>
+<span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a>  )) <span class="sc">%&gt;%</span></span>
+<span id="cb26-10"><a href="#cb26-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(dataset) <span class="sc">%&gt;%</span></span>
+<span id="cb26-11"><a href="#cb26-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">n =</span> <span class="fu">n_distinct</span>(life_id)) <span class="sc">%&gt;%</span></span>
+<span id="cb26-12"><a href="#cb26-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ungroup</span>()</span>
+<span id="cb26-13"><a href="#cb26-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-14"><a href="#cb26-14" aria-hidden="true" tabindex="-1"></a>descriptions_filter_mutate_group_summarise <span class="sc">%&gt;%</span></span>
+<span id="cb26-15"><a href="#cb26-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="sc">-</span>n)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 2
+  dataset     n
+  &lt;chr&gt;   &lt;int&gt;
+1 rhc     41948
+2 fas     12538
+3 cin      2381
+4 pld       849
+5 mpr        68
+6 hcr        12</code></pre>
+</div>
+</div>
+<p>Now the list of the dataset names for the labels.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>dataset_labels <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"HO Criminal Registers"</span>, <span class="st">"Millbank Prison Register"</span>, <span class="st">"Convict Licences"</span>,  <span class="st">"WA Convict Indents"</span>,  <span class="st">"Founders and Survivors"</span>, <span class="st">"Register of Habitual Criminals"</span>)</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>dataset_labels</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "HO Criminal Registers"          "Millbank Prison Register"      
+[3] "Convict Licences"               "WA Convict Indents"            
+[5] "Founders and Survivors"         "Register of Habitual Criminals"</code></pre>
+</div>
+</div>
+<p>To make the chart I use a package called {ggplot2} (which is included in the Tidyverse so I don’t need to load it separately). ggplot is advertised as “a grammar of graphics”, which should give a sense of how it works - rather like Tidyverse R as a whole. The different elements or layers of a chart are coded in separate steps, including</p>
+<ul>
+<li><strong>geom_</strong> to set the type of chart (bar, line, dot, etc)</li>
+<li><strong>scale_</strong> to handle axis and legend formatting, labelling and so on</li>
+<li><strong>facet_</strong> to split a chart into subcharts (aka “small multiples”)</li>
+<li><strong>theme_</strong> provides some convenient packages for overall aesthetics</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>descriptions_filter_mutate_group_summarise <span class="sc">%&gt;%</span></span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">dataset =</span> <span class="fu">fct_reorder</span>(dataset, n)) <span class="sc">%&gt;%</span> <span class="co"># put the bars in the order I want in the chart</span></span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x=</span>dataset, <span class="at">y=</span>n, <span class="at">fill=</span>dataset)) <span class="sc">+</span> <span class="co"># set up the data for ggplot</span></span>
+<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">show.legend =</span> <span class="cn">FALSE</span>) <span class="sc">+</span> <span class="co"># draw a bar chart</span></span>
+<span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_flip</span>() <span class="sc">+</span> <span class="co"># make the bars horizontal (some of the labels are quite long and it looks better)</span></span>
+<span id="cb30-7"><a href="#cb30-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_brewer</span>(<span class="at">palette =</span> <span class="st">"Reds"</span>) <span class="sc">+</span> <span class="co"># add some colours to the bars; purely cosmetic here</span></span>
+<span id="cb30-8"><a href="#cb30-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_discrete</span>(<span class="at">labels=</span>dataset_labels) <span class="sc">+</span> <span class="co"># add the labels</span></span>
+<span id="cb30-9"><a href="#cb30-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span> </span>
+<span id="cb30-10"><a href="#cb30-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">y=</span><span class="st">"number of convicts"</span>, <span class="at">x=</span><span class="cn">NULL</span>, <span class="at">title=</span><span class="st">"Number of Tattooed Convicts by Dataset"</span>) <span class="co"># titles </span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-17-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+<p>The second bar chart showed the frequencies of tattoo subjects.</p>
+<p><img src="images/bar_subject_frequencies.png" class="img-fluid"></p>
+<p>This will be quite similar to the first chart, but the <code>subjects</code> column can contain several subjects, not just one.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>descriptions_data <span class="sc">%&gt;%</span></span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(hastattoo<span class="sc">==</span><span class="st">"y"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>  <span class="co"># not all tattoos have subjects assigned; filter out the empty ones</span></span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="sc">!</span><span class="fu">is.na</span>(subjects)) <span class="sc">%&gt;%</span> </span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(subjects) <span class="sc">%&gt;%</span></span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a>  <span class="co"># just get the first six rows for a quick look</span></span>
+<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">head</span>() </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 1
+  subjects                                        
+  &lt;chr&gt;                                           
+1 love year astronomy namesinitials pleasure naval
+2 namesinitials                                   
+3 namesinitials naval                             
+4 namesinitials                                   
+5 love naval religion                             
+6 jewellery                                       </code></pre>
+</div>
+</div>
+<p>So I need to reshape the data so there’s just one subject per line before counting them; I’ll do this with a function called <code>unnest_tokens()</code> from the excellent {tidytext} package.</p>
+<p>So, the steps for this one:</p>
+<ul>
+<li>get descriptions with tattoos only</li>
+<li>filter out those without any subjects assigned</li>
+<li>separate out lists of subjects into one subject per line</li>
+<li>get the summary counts</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidytext)</span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a>descriptions_subjects_tokenised <span class="ot">&lt;-</span></span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a>descriptions_data <span class="sc">%&gt;%</span></span>
+<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(hastattoo<span class="sc">==</span><span class="st">"y"</span>, <span class="sc">!</span><span class="fu">is.na</span>(subjects)) <span class="sc">%&gt;%</span></span>
+<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(subrecordid, subjects) <span class="sc">%&gt;%</span></span>
+<span id="cb33-7"><a href="#cb33-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">unnest_tokens</span>(subject, subjects) <span class="sc">%&gt;%</span></span>
+<span id="cb33-8"><a href="#cb33-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">count</span>(subject, <span class="at">sort=</span><span class="cn">TRUE</span>)</span>
+<span id="cb33-9"><a href="#cb33-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-10"><a href="#cb33-10" aria-hidden="true" tabindex="-1"></a>descriptions_subjects_tokenised</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 19 × 2
+   subject               n
+   &lt;chr&gt;             &lt;int&gt;
+ 1 namesinitials     41832
+ 2 naval             21417
+ 3 religion          14412
+ 4 love              14342
+ 5 jewellery         13154
+ 6 nationalidentity  11948
+ 7 nature            11082
+ 8 astronomy          7113
+ 9 death              4366
+10 britain            3879
+11 pleasure           3237
+12 military           2628
+13 year               1295
+14 ireland            1211
+15 america            1165
+16 justicepunishment   439
+17 sex                 205
+18 invention            49
+19 australia            10</code></pre>
+</div>
+</div>
+<p>And now to draw the chart:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>descriptions_subjects_tokenised <span class="sc">%&gt;%</span></span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">subject =</span> <span class="fu">fct_reorder</span>(subject, n)) <span class="sc">%&gt;%</span></span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ggplot</span>(<span class="fu">aes</span>(subject, n)) <span class="sc">+</span></span>
+<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_col</span>() <span class="sc">+</span></span>
+<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">coord_flip</span>() <span class="sc">+</span></span>
+<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
+<span id="cb35-7"><a href="#cb35-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">y =</span> <span class="st">"number of subjects"</span>,  <span class="at">x =</span> <span class="cn">NULL</span>, <span class="at">title=</span><span class="st">"Frequencies of Tattoo Subjects"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="index_files/figure-html/unnamed-chunk-20-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>
