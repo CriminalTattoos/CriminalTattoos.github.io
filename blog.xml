@@ -9,7 +9,7 @@
 <link>https://CriminalTattoos.github.io/blog.html</link>
 <atom:link href="https://CriminalTattoos.github.io/blog.xml" rel="self" type="application/rss+xml"/>
 <description></description>
-<generator>quarto-1.2.335</generator>
+<generator>quarto-1.2.475</generator>
 <lastBuildDate>Fri, 18 Jun 2021 23:00:00 GMT</lastBuildDate>
 <item>
   <title>Come TogetheR: Combining data tables in R with dplyr join verbs</title>

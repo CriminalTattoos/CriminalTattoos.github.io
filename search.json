@@ -221,7 +221,7 @@
     "href": "index.html#credits",
     "title": "Nineteenth-Century Criminal Tattoos",
     "section": "Credits",
-    "text": "Credits\nThe project was funded by British Academy/Jisc Digital Research in the Humanities from 2018 to 2019.\nThe project directors are Robert Shoemaker, University of Sheffield, and Zoe Alker, University of Liverpool.\nProject technical development is carried out by the Digital Humanities Institute | Sheffield • Project webpage.\nThis blog has been built by Sharon Howard, with a little help from RStudio, Blogdown, Markdown and Github."
+    "text": "Credits\nThe project was funded by British Academy/Jisc Digital Research in the Humanities from 2018 to 2019.\nThe project directors are Robert Shoemaker, University of Sheffield, and Zoe Alker, University of Liverpool.\nProject technical development is carried out by the Digital Humanities Institute | Sheffield • Project webpage.\nThis blog has been built by Sharon Howard, with a little help from RStudio, Quarto and Github."
   },
   {
     "objectID": "index.html#re-use",
